@@ -456,13 +456,13 @@
           ]
         },
         {
-          "label": "-- All-Fill semi-auto fillers x6 - $122K",
+          "label": "- All-Fill Semi-Automated Fillers (QTy x6) - $122k",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "PO issued Mar 13",
+          "label": "PO Issued (March 13th) ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
@@ -475,14 +475,27 @@
           ]
         },
         {
-          "label": "Delivery & installation (est.)",
+          "label": "FAT & Delivery",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
               "start": 1,
-              "end": 3.5,
+              "end": 1,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "Installation & Commissioning",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1,
+              "end": 3,
               "color": "#7F77DD"
             }
           ]
