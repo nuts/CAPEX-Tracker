@@ -633,7 +633,7 @@
             {
               "month": 0,
               "pct": 40,
-              "done": true
+              "done": false
             }
           ]
         },
@@ -683,84 +683,152 @@
           ]
         },
         {
-          "label": "-- Remaining scope (declumper, powder filler, electrical, drains, printing, N2)",
+          "label": "--- Infrastructure & Installation Work (Cibco GC) ",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "Vendor selection & POs (est.)",
+          "label": "Permit Submittal & Approval",
           "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": "medium",
+          "is_critical_path": true,
+          "risk_level": "",
           "bars": [
             {
-              "start": 1.02,
-              "end": 2.46,
-              "color": "#AFA9EC"
+              "start": 1.31,
+              "end": 2.3,
+              "color": "#378ADD"
+            }
+          ],
+          "milestones": [
+            {
+              "month": 2,
+              "pct": 30,
+              "done": false
             }
           ]
         },
         {
-          "label": "Delivery & installation (est.)",
+          "label": "Final Subcontractor Pricing ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 3.02,
-              "end": 6.55,
-              "color": "#7F77DD"
+              "start": 1.31,
+              "end": 1.77,
+              "color": "#378ADD"
             }
           ]
         },
         {
-          "label": "",
+          "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "medium",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 77,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "Physical Work Starts ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 2.3,
+              "end": 8.19,
+              "color": "#7F77DD"
+            }
+          ],
+          "milestones": [
+            {
+              "month": 2,
+              "pct": 30,
+              "done": false
+            }
+          ]
         },
         {
           "label": "--- Direct to Pouch Printing (TTO Pouchmark Qty x2)",
-          "is_subheader": false,
+          "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "",
+          "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 64,
+              "done": false
+            }
+          ]
         },
         {
           "label": "--- Powder Filler (All Fill)",
-          "is_subheader": false,
+          "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "",
+          "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 64,
+              "done": false
+            }
+          ]
         },
         {
           "label": "--- Dried Fruit DeClumper (Valley)",
-          "is_subheader": false,
+          "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "",
+          "label": "PO Issue",
           "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 64,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "--- Nitrogen Generator ",
+          "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "",
+          "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 64,
+              "done": false
+            }
+          ]
         },
         {
           "label": "",
