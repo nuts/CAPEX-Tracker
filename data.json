@@ -4,7 +4,7 @@
     "title": "Capital Projects Tracker ? Plant of the Future",
     "facility": "NJ facility",
     "fiscal_year": "FY2026",
-    "last_updated": "Tue Apr 07 2026 00:00:00 GMT-0400 (Eastern Daylight Time)",
+    "last_updated": "April 8, 2026",
     "last_updated_by": "Mark Toppel"
   },
   "open_items": [
@@ -894,6 +894,152 @@
       "investment": 1000000,
       "savings": null,
       "estimated_approval_date": "Q4 2026"
+    }
+  ],
+  "cashflow": [
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Brightpick - Milestone 1 ? 30% deposit paid",
+      "po": "60018",
+      "amount": 659100,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
+    },
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Brightpick - Milestone 2 ? 30% on delivery",
+      "po": "60018",
+      "amount": 659100,
+      "date": "Jun 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Brightpick - Milestone 3 ? 30% on system compliance",
+      "po": "60018",
+      "amount": 659100,
+      "date": "Sep 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Brightpick - Milestone 4 ? 10% final acceptance",
+      "po": "60018",
+      "amount": 219700,
+      "date": "Nov 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Brightpick - Spare Parts ",
+      "po": "TBD",
+      "amount": 59743.84,
+      "date": "Jul 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "po": "60025 / Inv 58353",
+      "amount": 348628.5,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "po": "60025 / Inv 58353",
+      "amount": 209177.1,
+      "date": "Mar 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "po": "60025 / Inv 58353",
+      "amount": 69725.7,
+      "date": "Mar 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "po": "60025 / Inv 58353",
+      "amount": 69725.7,
+      "date": "Mar 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "All-Fill Inc - 6 new semi-automated fillers",
+      "po": "60005",
+      "amount": 134950,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "The Mezzanine Company - 25% deposit paid with order",
+      "po": "Q26-0304 M1",
+      "amount": 71262.5,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "The Mezzanine Company - 25% due prior to production",
+      "po": "Q26-0304 M2",
+      "amount": 71262.5,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "The Mezzanine Company - 40% due prior to shipment",
+      "po": "Q26-0304 M3",
+      "amount": 114020,
+      "date": "Jun 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "The Mezzanine Company - 10% net-15 after installation",
+      "po": "Q26-0304 M4",
+      "amount": 28505,
+      "date": "Aug 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Global Industrial - 3 pallet lifts for 6 All-Fill machines",
+      "po": "60014",
+      "amount": 22813.11,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Ajay Metal - 3 platform stairs for 6 All-Fill machines",
+      "po": "60008",
+      "amount": 9196.4,
+      "date": "Mar 2026",
+      "status": "paid",
+      "confirmed": true
     }
   ]
 }
