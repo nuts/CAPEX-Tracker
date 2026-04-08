@@ -81,7 +81,13 @@
       ],
       "gantt": [
         {
-          "label": "Contract signed + 30% deposit (~$659K paid)",
+          "label": "--- Brightpick Automated Fullfillment ",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Contract Signed & PO Issued ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
@@ -94,27 +100,27 @@
           ]
         },
         {
-          "label": "Robot & racking lead time (28 wks)",
+          "label": "Robot & Racking Manufacturing (28 weeks)",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "medium",
           "bars": [
             {
-              "start": -0.98,
-              "end": 5.44,
+              "start": -0.75,
+              "end": 5.67,
               "color": "#B5D4F4"
             }
           ]
         },
         {
-          "label": "Equipment delivery",
+          "label": "Equipment Shipment ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 3.61,
-              "end": 3.97,
+              "start": 5.67,
+              "end": 6.58,
               "color": "#378ADD"
             }
           ],
@@ -127,59 +133,104 @@
           ]
         },
         {
-          "label": "Site prep (mezz must be complete first)",
-          "is_subheader": false,
-          "is_critical_path": true,
-          "risk_level": "high",
-          "bars": [
-            {
-              "start": 3.02,
-              "end": 4.46,
-              "color": "#85B7EB"
-            }
-          ]
-        },
-        {
-          "label": "Conveyance installation",
+          "label": "Equipment Delivery  ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 4.29,
-              "end": 5.21,
+              "start": 6.58,
+              "end": 6.58,
               "color": "#378ADD"
             }
           ]
         },
         {
-          "label": "Conveyance testing & go-live",
+          "label": "Site Preperation (Floors & Mezzanine) ",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "bars": [
+            {
+              "start": 4.16,
+              "end": 5.54,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance PO Issued",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Conveyance Manufacturing ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 5.21,
-              "end": 5.67,
+              "start": 1.64,
+              "end": 3.7,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance Installation",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.7,
+              "end": 4.85,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance Commisioning ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 4.85,
+              "end": 5.31,
               "color": "#85B7EB"
             }
           ]
         },
         {
-          "label": "Testing & SAT",
+          "label": "Robot & Racking Assembly ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 6.58,
+              "end": 7.27,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Full System Testing & SAT",
           "is_subheader": false,
           "is_critical_path": true,
           "risk_level": "medium",
           "bars": [
             {
-              "start": 5.44,
-              "end": 6.81,
+              "start": 7.27,
+              "end": 7.96,
               "color": "#85B7EB"
             }
           ]
         },
         {
-          "label": "Full go-live",
+          "label": "Brightpick GO-LIVE",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
@@ -190,6 +241,25 @@
               "done": false
             }
           ]
+        },
+        {
+          "label": "Brightpick On-Site Support Period",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 7.96,
+              "end": 9.56,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Brightpick Contract Completion",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": ""
         }
       ],
       "capital_items": [
@@ -436,8 +506,8 @@
           "risk_level": "high",
           "bars": [
             {
-              "start": 5.44,
-              "end": 5.44,
+              "start": 7.27,
+              "end": 7.27,
               "color": "#378ADD"
             }
           ],
