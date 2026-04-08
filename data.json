@@ -341,7 +341,7 @@
       ],
       "gantt": [
         {
-          "label": "-- Mezzanine - The Mezzanine Company - $285,050",
+          "label": "--- Expnd the Fulfillment Mezzanine (4,500 sqft)",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
