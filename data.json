@@ -126,8 +126,8 @@
           ],
           "milestones": [
             {
-              "month": 3,
-              "pct": 97,
+              "month": 5,
+              "pct": 67,
               "done": false
             }
           ]
@@ -143,12 +143,19 @@
               "end": 6.58,
               "color": "#378ADD"
             }
+          ],
+          "milestones": [
+            {
+              "month": 6,
+              "pct": 58,
+              "done": false
+            }
           ]
         },
         {
           "label": "Site Preperation (Floors & Mezzanine) ",
           "is_subheader": false,
-          "is_critical_path": true,
+          "is_critical_path": false,
           "risk_level": "high",
           "bars": [
             {
@@ -162,7 +169,14 @@
           "label": "Conveyance PO Issued",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 1,
+              "pct": 64,
+              "done": false
+            }
+          ]
         },
         {
           "label": "Conveyance Manufacturing ",
@@ -206,13 +220,20 @@
         {
           "label": "Robot & Racking Assembly ",
           "is_subheader": false,
-          "is_critical_path": false,
+          "is_critical_path": true,
           "risk_level": "",
           "bars": [
             {
               "start": 6.58,
               "end": 7.27,
               "color": "#378ADD"
+            }
+          ],
+          "milestones": [
+            {
+              "month": 7,
+              "pct": 27,
+              "done": false
             }
           ]
         },
@@ -227,20 +248,20 @@
               "end": 7.96,
               "color": "#85B7EB"
             }
+          ],
+          "milestones": [
+            {
+              "month": 7,
+              "pct": 96,
+              "done": false
+            }
           ]
         },
         {
           "label": "Brightpick GO-LIVE",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "milestones": [
-            {
-              "month": 8,
-              "pct": 19,
-              "done": false
-            }
-          ]
+          "risk_level": ""
         },
         {
           "label": "Brightpick On-Site Support Period",
@@ -458,6 +479,13 @@
               "end": 3.15,
               "color": "#5DCAA5"
             }
+          ],
+          "milestones": [
+            {
+              "month": 3,
+              "pct": 15,
+              "done": false
+            }
           ]
         },
         {
@@ -476,7 +504,7 @@
         {
           "label": "Delivery ",
           "is_subheader": false,
-          "is_critical_path": false,
+          "is_critical_path": true,
           "risk_level": "",
           "bars": [
             {
@@ -559,7 +587,7 @@
           "milestones": [
             {
               "month": 5,
-              "pct": 63,
+              "pct": 86,
               "done": false
             }
           ]
