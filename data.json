@@ -1,0 +1,610 @@
+{
+  "meta": {
+    "company": "Nuts.com",
+    "title": "Capital Projects Tracker ? Plant of the Future",
+    "facility": "NJ facility",
+    "fiscal_year": "FY2026",
+    "last_updated": "Tue Apr 07 2026 00:00:00 GMT-0400 (Eastern Daylight Time)",
+    "last_updated_by": "Mark Toppel"
+  },
+  "open_items": [
+    "DRAFT - DO NOT USE FOR BOARD LEVEL UPDATES"
+  ],
+  "projects": [
+    {
+      "id": "nj-fulfillment-phase-1-brightpick",
+      "name": "NJ Fulfillment Phase 1 - Brightpick",
+      "status": "active",
+      "approved_budget": 2700000,
+      "contract_total": 2197000,
+      "paid_to_date": 659100,
+      "annualized_savings": 770000,
+      "color": "#378ADD",
+      "color_light": "#B5D4F4",
+      "note": "Contract signed Mar 10. Contract value $2,197,000 is $503K under the $2.7M approved budget. 10% contingency ($263,500) included in approval. PO# not yet confirmed.",
+      "project_number": "26-0001",
+      "project_leader": "Mark Toppel",
+      "irr": 0.165,
+      "npv": 1279020,
+      "simple_payback_yrs": 4,
+      "start_date": "2026-01-30T05:00:00.000Z",
+      "completion_date": "2026-11-06T05:00:00.000Z",
+      "budget_detail": {
+        "capital": 2635000,
+        "contingency_pct": 10,
+        "contingency_budget": 263500,
+        "contingency_used": 30000,
+        "project_expense": 189200,
+        "total_investment": 2824200
+      },
+      "pos": [],
+      "gantt": [
+        {
+          "label": "Contract signed + 30% deposit (~$659K paid)",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": ""
+        },
+        {
+          "label": "Robot & racking lead time (28 wks)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": true,
+          "bars": [
+            {
+              "start": 0.6,
+              "end": 6.5,
+              "color": "#B5D4F4"
+            }
+          ]
+        },
+        {
+          "label": "Equipment delivery",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.4,
+              "end": 3.9,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Site prep (mezz must be complete first)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": true,
+          "bars": [
+            {
+              "start": 3,
+              "end": 4.5,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance installation",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 4.3,
+              "end": 5.3,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance testing & go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.3,
+              "end": 5.8,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Testing & SAT",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": true,
+          "bars": [
+            {
+              "start": 5.4,
+              "end": 6.9,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Full go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 8,
+              "pct": 30,
+              "done": false
+            }
+          ]
+        }
+      ],
+      "capital_items": [
+        {
+          "item": "Brightpick robots, hardware & contract",
+          "amount": 2200000,
+          "category": "Capital"
+        },
+        {
+          "item": "Conveyance (induction & return)",
+          "amount": 405000,
+          "category": "Capital"
+        },
+        {
+          "item": "10% contingency",
+          "amount": 263500,
+          "category": "Contingency"
+        },
+        {
+          "item": "Project expenses (integration, commissioning, training)",
+          "amount": 189200,
+          "category": "Expense"
+        }
+      ]
+    },
+    {
+      "id": "packaging-plant-modernization",
+      "name": "Packaging / Plant Modernization",
+      "status": "active",
+      "approved_budget": 3700000,
+      "contract_total": 3700000,
+      "paid_to_date": 935479,
+      "annualized_savings": 2200000,
+      "color": "#1D9E75",
+      "color_light": "#9FE1CB",
+      "note": "20% contingency base / 25% conservative / 10% upside. Viking 8S-285 is full preformed bagging line at $465K. Mezzanine contact: Andrew Altman, The Mezzanine Company.",
+      "project_number": "26-0002",
+      "project_leader": "Mark Toppel",
+      "irr": 0.416,
+      "npv": 7264837,
+      "simple_payback_yrs": 1.8,
+      "start_date": "2026-03-01T05:00:00.000Z",
+      "completion_date": "2026-10-25T04:00:00.000Z",
+      "budget_detail": {
+        "capital": 3643560,
+        "contingency_pct": 20,
+        "contingency_budget": 728712,
+        "contingency_used": 0,
+        "project_expense": 27500,
+        "total_investment": 3671060
+      },
+      "pos": [
+        {
+          "po": "60025 / Inv 58353",
+          "vendor": "Viking Masek Packaging Technologies LLC",
+          "description": "New rotary pouch filler ? initial deposit",
+          "date": "2026-03-18T04:00:00.000Z",
+          "amount": 697257,
+          "type": "paid"
+        },
+        {
+          "po": 60005,
+          "vendor": "All-Fill Inc",
+          "description": "6 new semi-automated fillers",
+          "date": "2026-03-13T04:00:00.000Z",
+          "amount": 134950,
+          "type": "paid"
+        },
+        {
+          "po": "Q26-0304",
+          "vendor": "The Mezzanine Company",
+          "description": "New mezzanine build ? full contract",
+          "date": "2026-03-13T04:00:00.000Z",
+          "amount": 285050,
+          "type": "contract"
+        },
+        {
+          "po": "Q26-0304 M1",
+          "vendor": "The Mezzanine Company",
+          "description": "25% deposit paid with order",
+          "date": "2026-03-13T04:00:00.000Z",
+          "amount": 71262.5,
+          "type": "paid"
+        },
+        {
+          "po": "Q26-0304 M2",
+          "vendor": "The Mezzanine Company",
+          "description": "25% due prior to production",
+          "date": "~Apr/May 2026",
+          "amount": 71262.5,
+          "type": "pending"
+        },
+        {
+          "po": "Q26-0304 M3",
+          "vendor": "The Mezzanine Company",
+          "description": "40% due prior to shipment",
+          "date": "~Jun 2026",
+          "amount": 114020,
+          "type": "pending"
+        },
+        {
+          "po": "Q26-0304 M4",
+          "vendor": "The Mezzanine Company",
+          "description": "10% net-15 after installation",
+          "date": "~Jul/Aug 2026",
+          "amount": 28505,
+          "type": "pending"
+        },
+        {
+          "po": 60014,
+          "vendor": "Global Industrial",
+          "description": "3 pallet lifts for 6 All-Fill machines",
+          "date": "2026-03-10T04:00:00.000Z",
+          "amount": 22813.11,
+          "type": "paid"
+        },
+        {
+          "po": 60008,
+          "vendor": "Ajay Metal",
+          "description": "3 platform stairs for 6 All-Fill machines",
+          "date": "2026-03-05T05:00:00.000Z",
+          "amount": 9196.4,
+          "type": "paid"
+        }
+      ],
+      "gantt": [
+        {
+          "label": "-- Mezzanine - The Mezzanine Company - $285,050",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "PO issued Mar 13 - 25% deposit paid",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 40,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Design, fabrication & delivery",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": true,
+          "bars": [
+            {
+              "start": 0.4,
+              "end": 3.6,
+              "color": "#5DCAA5"
+            }
+          ]
+        },
+        {
+          "label": "Installation & commissioning",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.5,
+              "end": 4.8,
+              "color": "#1D9E75"
+            }
+          ]
+        },
+        {
+          "label": "Complete (Brightpick site-prep dependency)",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "milestones": [
+            {
+              "month": 4,
+              "pct": 75,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "-- Viking Masek bagging line (8S-285) - $465K approved",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Initial deposit invoice Mar 18",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 55,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Manufacturing (20-wk lead from Apr 2)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1,
+              "end": 5.5,
+              "color": "#FAC775"
+            }
+          ]
+        },
+        {
+          "label": "Delivery (~Aug 20)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 5,
+              "pct": 40,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "Installation & commissioning",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.4,
+              "end": 6.5,
+              "color": "#EF9F27"
+            }
+          ]
+        },
+        {
+          "label": "Go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 6,
+              "pct": 40,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "-- All-Fill semi-auto fillers x6 - $122K",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "PO issued Mar 13",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 40,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Delivery & installation (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1,
+              "end": 3.5,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "-- Remaining scope (declumper, powder filler, electrical, drains, printing, N2)",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Vendor selection & POs (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1,
+              "end": 2.5,
+              "color": "#AFA9EC"
+            }
+          ]
+        },
+        {
+          "label": "Delivery & installation (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3,
+              "end": 6.5,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "-- Infrastructure: stairs + pallet lifts - $32K",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "POs issued Mar 5-10",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 20,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Delivery & install",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 0.2,
+              "end": 1.6,
+              "color": "#CECBF6"
+            }
+          ]
+        }
+      ],
+      "capital_items": [
+        {
+          "item": "Complete preformed bagging line - Viking Masek 8S-285",
+          "amount": 465000,
+          "category": "Capital"
+        },
+        {
+          "item": "New mezzanine - structure",
+          "amount": 450000,
+          "category": "Capital"
+        },
+        {
+          "item": "Electrical installation (new & relocating baggers)",
+          "amount": 355000,
+          "category": "Capital"
+        },
+        {
+          "item": "Mechanical (plumbing, ducting, HVAC)",
+          "amount": 192000,
+          "category": "Capital"
+        },
+        {
+          "item": "New mezzanine - fire protection",
+          "amount": 150000,
+          "category": "Capital"
+        },
+        {
+          "item": "VF100e semi-automated fillers x6 (All-Fill)",
+          "amount": 122000,
+          "category": "Capital"
+        },
+        {
+          "item": "Drains for roasting (80LF + grease trap)",
+          "amount": 83300,
+          "category": "Capital"
+        },
+        {
+          "item": "Direct pouch printing - PouchMark FLOW XT500 x2",
+          "amount": 80000,
+          "category": "Capital"
+        },
+        {
+          "item": "Dried fruit declumper (Whirlwind Engineering)",
+          "amount": 70000,
+          "category": "Capital"
+        },
+        {
+          "item": "Powder filler - TBD (Viking or All-Fill)",
+          "amount": 65000,
+          "category": "Capital"
+        },
+        {
+          "item": "Nitrogen generator - N2GEN TS (backflush)",
+          "amount": 65000,
+          "category": "Capital"
+        },
+        {
+          "item": "New mezzanine - lighting",
+          "amount": 45000,
+          "category": "Capital"
+        },
+        {
+          "item": "Additional stainless steel tables & conveyors",
+          "amount": 30000,
+          "category": "Capital"
+        },
+        {
+          "item": "New custom tray line on mezz",
+          "amount": 30000,
+          "category": "Capital"
+        },
+        {
+          "item": "Pallet lift tables x3",
+          "amount": 25000,
+          "category": "Capital"
+        },
+        {
+          "item": "Stainless steel work platforms x3",
+          "amount": 10000,
+          "category": "Capital"
+        },
+        {
+          "item": "20% contingency (base case)",
+          "amount": 728712,
+          "category": "Contingency"
+        },
+        {
+          "item": "Project expenses (engineering, commissioning)",
+          "amount": 27500,
+          "category": "Expense"
+        }
+      ]
+    }
+  ],
+  "pipeline": [
+    {
+      "name": "Dumoulin automated chocolate panning",
+      "investment": 1800000,
+      "savings": 1200000,
+      "estimated_approval_date": "Q3 2026"
+    },
+    {
+      "name": "Raw material AS/RS",
+      "investment": 2100000,
+      "savings": 1000000,
+      "estimated_approval_date": "Q3 2026"
+    },
+    {
+      "name": "NJ Fulfillment Phase 2 - Brightpick",
+      "investment": 1100000,
+      "savings": 350000,
+      "estimated_approval_date": "Q4 2026"
+    },
+    {
+      "name": "Non-ROI upgrades (building / infrastructure)",
+      "investment": 1000000,
+      "savings": null,
+      "estimated_approval_date": "Q4 2026"
+    }
+  ]
+}
