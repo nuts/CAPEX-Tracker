@@ -1,7 +1,7 @@
 {
   "meta": {
     "company": "Nuts.com",
-    "title": "Capital Projects Tracker ? Plant of the Future",
+    "title": "Capital Projects Tracker - Plant of the Future",
     "facility": "NJ facility",
     "fiscal_year": "FY2026",
     "last_updated": "April 8, 2026",
@@ -41,7 +41,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Milestone 1 ? 30% deposit paid",
+          "description": "Milestone 1 - 30% deposit paid",
           "date": "~Mar 17, 2026",
           "amount": 659100,
           "type": "paid"
@@ -49,7 +49,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Milestone 2 ? 30% on delivery",
+          "description": "Milestone 2 - 30% on delivery",
           "date": "~Jun 2026",
           "amount": 659100,
           "type": "pending"
@@ -57,7 +57,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Milestone 3 ? 30% on system compliance",
+          "description": "Milestone 3 - 30% on system compliance",
           "date": "~Sep 2026",
           "amount": 659100,
           "type": "pending"
@@ -65,7 +65,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Milestone 4 ? 10% final acceptance",
+          "description": "Milestone 4 - 10% final acceptance",
           "date": "~Nov 2026",
           "amount": 219700,
           "type": "pending"
@@ -73,7 +73,7 @@
         {
           "po": "TBD",
           "vendor": "Brightpick",
-          "description": "Spare Parts ",
+          "description": "Spare Parts",
           "date": "2026-07-01T04:00:00.000Z",
           "amount": 59743.84,
           "type": "pending"
@@ -81,22 +81,18 @@
       ],
       "gantt": [
         {
-          "label": "--- Brightpick Automated Fullfillment ",
+          "label": "--- Brightpick Automated Fulfillment",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "Contract Signed & PO Issued ",
+          "label": "Contract Signed & PO Issued",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 0,
-              "pct": 30,
-              "done": true
-            }
+            { "month": 0, "pct": 30, "done": true }
           ]
         },
         {
@@ -105,64 +101,40 @@
           "is_critical_path": false,
           "risk_level": "medium",
           "bars": [
-            {
-              "start": -0.75,
-              "end": 5.67,
-              "color": "#B5D4F4"
-            }
+            { "start": -0.75, "end": 5.67, "color": "#B5D4F4" }
           ]
         },
         {
-          "label": "Equipment Shipment ",
+          "label": "Equipment Shipment",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 5.67,
-              "end": 6.58,
-              "color": "#378ADD"
-            }
+            { "start": 5.67, "end": 6.58, "color": "#378ADD" }
           ],
           "milestones": [
-            {
-              "month": 5,
-              "pct": 67,
-              "done": false
-            }
+            { "month": 5, "pct": 67, "done": false }
           ]
         },
         {
-          "label": "Equipment Delivery  ",
+          "label": "Equipment Delivery",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 6.58,
-              "end": 6.58,
-              "color": "#378ADD"
-            }
+            { "start": 6.58, "end": 6.58, "color": "#378ADD" }
           ],
           "milestones": [
-            {
-              "month": 6,
-              "pct": 58,
-              "done": false
-            }
+            { "month": 6, "pct": 58, "done": false }
           ]
         },
         {
-          "label": "Site Preperation (Floors & Mezzanine) ",
+          "label": "Site Preparation (Floors & Mezzanine)",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "high",
           "bars": [
-            {
-              "start": 4.16,
-              "end": 5.54,
-              "color": "#85B7EB"
-            }
+            { "start": 4.16, "end": 5.54, "color": "#85B7EB" }
           ]
         },
         {
@@ -171,24 +143,16 @@
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 1,
-              "pct": 64,
-              "done": false
-            }
+            { "month": 1, "pct": 64, "done": false }
           ]
         },
         {
-          "label": "Conveyance Manufacturing ",
+          "label": "Conveyance Manufacturing",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 1.64,
-              "end": 3.7,
-              "color": "#378ADD"
-            }
+            { "start": 1.64, "end": 3.7, "color": "#378ADD" }
           ]
         },
         {
@@ -197,44 +161,28 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 3.7,
-              "end": 4.85,
-              "color": "#378ADD"
-            }
+            { "start": 3.7, "end": 4.85, "color": "#378ADD" }
           ]
         },
         {
-          "label": "Conveyance Commisioning ",
+          "label": "Conveyance Commissioning",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 4.85,
-              "end": 5.31,
-              "color": "#85B7EB"
-            }
+            { "start": 4.85, "end": 5.31, "color": "#85B7EB" }
           ]
         },
         {
-          "label": "Robot & Racking Assembly ",
+          "label": "Robot & Racking Assembly",
           "is_subheader": false,
           "is_critical_path": true,
           "risk_level": "",
           "bars": [
-            {
-              "start": 6.58,
-              "end": 7.27,
-              "color": "#378ADD"
-            }
+            { "start": 6.58, "end": 7.27, "color": "#378ADD" }
           ],
           "milestones": [
-            {
-              "month": 7,
-              "pct": 27,
-              "done": false
-            }
+            { "month": 7, "pct": 27, "done": false }
           ]
         },
         {
@@ -243,18 +191,10 @@
           "is_critical_path": true,
           "risk_level": "medium",
           "bars": [
-            {
-              "start": 7.27,
-              "end": 7.96,
-              "color": "#85B7EB"
-            }
+            { "start": 7.27, "end": 7.96, "color": "#85B7EB" }
           ],
           "milestones": [
-            {
-              "month": 7,
-              "pct": 96,
-              "done": false
-            }
+            { "month": 7, "pct": 96, "done": false }
           ]
         },
         {
@@ -269,11 +209,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 7.96,
-              "end": 9.56,
-              "color": "#378ADD"
-            }
+            { "start": 7.96, "end": 9.56, "color": "#378ADD" }
           ]
         },
         {
@@ -284,26 +220,10 @@
         }
       ],
       "capital_items": [
-        {
-          "item": "Brightpick robots, hardware & contract",
-          "amount": 2200000,
-          "category": "Capital"
-        },
-        {
-          "item": "Conveyance (induction & return)",
-          "amount": 405000,
-          "category": "Capital"
-        },
-        {
-          "item": "10% contingency",
-          "amount": 263500,
-          "category": "Contingency"
-        },
-        {
-          "item": "Project expenses (integration, commissioning, training)",
-          "amount": 189200,
-          "category": "Expense"
-        }
+        { "item": "Brightpick robots, hardware & contract", "amount": 2200000, "category": "Capital" },
+        { "item": "Conveyance (induction & return)", "amount": 405000, "category": "Capital" },
+        { "item": "10% contingency", "amount": 263500, "category": "Contingency" },
+        { "item": "Project expenses (integration, commissioning, training)", "amount": 189200, "category": "Expense" }
       ]
     },
     {
@@ -336,7 +256,7 @@
         {
           "po": "60025 / Inv 58353",
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "New rotary pouch filler ? initial deposit",
+          "description": "New rotary pouch filler - initial deposit",
           "date": "2026-03-18T04:00:00.000Z",
           "amount": 348628.5,
           "type": "paid"
@@ -344,7 +264,7 @@
         {
           "po": "60025 / Inv 58353",
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "New rotary pouch filler ? initial deposit",
+          "description": "New rotary pouch filler - 2nd payment",
           "date": "2026-03-18T04:00:00.000Z",
           "amount": 209177.1,
           "type": "pending"
@@ -352,7 +272,7 @@
         {
           "po": "60025 / Inv 58353",
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "New rotary pouch filler ? initial deposit",
+          "description": "New rotary pouch filler - 3rd payment",
           "date": "2026-03-18T04:00:00.000Z",
           "amount": 69725.7,
           "type": "pending"
@@ -360,7 +280,7 @@
         {
           "po": "60025 / Inv 58353",
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "New rotary pouch filler ? initial deposit",
+          "description": "New rotary pouch filler - final payment",
           "date": "2026-03-18T04:00:00.000Z",
           "amount": 69725.7,
           "type": "pending"
@@ -424,22 +344,18 @@
       ],
       "gantt": [
         {
-          "label": "--- Expnd the Fulfillment Mezzanine (4,500 sqft)",
+          "label": "--- Expand the Fulfillment Mezzanine (4,500 sqft)",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "PO Issued (March 13th) ",
+          "label": "PO Issued (March 13th)",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 0,
-              "pct": 40,
-              "done": true
-            }
+            { "month": 0, "pct": 40, "done": true }
           ]
         },
         {
@@ -448,11 +364,7 @@
           "is_critical_path": true,
           "risk_level": "high",
           "bars": [
-            {
-              "start": 0.4,
-              "end": 1.77,
-              "color": "#5DCAA5"
-            }
+            { "start": 0.4, "end": 1.77, "color": "#5DCAA5" }
           ]
         },
         {
@@ -461,11 +373,7 @@
           "is_critical_path": true,
           "risk_level": "high",
           "bars": [
-            {
-              "start": 1.77,
-              "end": 2.23,
-              "color": "#5DCAA5"
-            }
+            { "start": 1.77, "end": 2.23, "color": "#5DCAA5" }
           ]
         },
         {
@@ -474,18 +382,10 @@
           "is_critical_path": true,
           "risk_level": "high",
           "bars": [
-            {
-              "start": 2.23,
-              "end": 3.15,
-              "color": "#5DCAA5"
-            }
+            { "start": 2.23, "end": 3.15, "color": "#5DCAA5" }
           ],
           "milestones": [
-            {
-              "month": 3,
-              "pct": 15,
-              "done": false
-            }
+            { "month": 3, "pct": 15, "done": false }
           ]
         },
         {
@@ -494,24 +394,16 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 3.15,
-              "end": 5.44,
-              "color": "#5DCAA5"
-            }
+            { "start": 3.15, "end": 5.44, "color": "#5DCAA5" }
           ]
         },
         {
-          "label": "Delivery ",
+          "label": "Delivery",
           "is_subheader": false,
           "is_critical_path": true,
           "risk_level": "",
           "bars": [
-            {
-              "start": 5.44,
-              "end": 5.67,
-              "color": "#5DCAA5"
-            }
+            { "start": 5.44, "end": 5.67, "color": "#5DCAA5" }
           ]
         },
         {
@@ -520,11 +412,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 5.67,
-              "end": 6.13,
-              "color": "#5DCAA5"
-            }
+            { "start": 5.67, "end": 6.13, "color": "#5DCAA5" }
           ]
         },
         {
@@ -533,22 +421,14 @@
           "is_critical_path": true,
           "risk_level": "high",
           "bars": [
-            {
-              "start": 7.27,
-              "end": 7.27,
-              "color": "#378ADD"
-            }
+            { "start": 7.27, "end": 7.27, "color": "#378ADD" }
           ],
           "milestones": [
-            {
-              "month": 4,
-              "pct": 78,
-              "done": false
-            }
+            { "month": 4, "pct": 78, "done": false }
           ]
         },
         {
-          "label": "---VikingMasek Preformed Bagger (Model 8S-285)",
+          "label": "--- VikingMasek Preformed Bagger (Model 8S-285)",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
@@ -559,11 +439,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 0,
-              "pct": 56,
-              "done": true
-            }
+            { "month": 0, "pct": 56, "done": true }
           ]
         },
         {
@@ -572,11 +448,7 @@
           "is_critical_path": false,
           "risk_level": "medium",
           "bars": [
-            {
-              "start": 1.05,
-              "end": 5.63,
-              "color": "#FAC775"
-            }
+            { "start": 1.05, "end": 5.63, "color": "#FAC775" }
           ]
         },
         {
@@ -585,11 +457,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 5,
-              "pct": 86,
-              "done": false
-            }
+            { "month": 5, "pct": 86, "done": false }
           ]
         },
         {
@@ -598,11 +466,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 5.86,
-              "end": 6.55,
-              "color": "#EF9F27"
-            }
+            { "start": 5.86, "end": 6.55, "color": "#EF9F27" }
           ]
         },
         {
@@ -611,18 +475,10 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 6.55,
-              "end": 6.55,
-              "color": "#EF9F27"
-            }
+            { "start": 6.55, "end": 6.55, "color": "#EF9F27" }
           ],
           "milestones": [
-            {
-              "month": 6,
-              "pct": 55,
-              "done": false
-            }
+            { "month": 6, "pct": 55, "done": false }
           ]
         },
         {
@@ -637,11 +493,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
-            {
-              "month": 0,
-              "pct": 40,
-              "done": true
-            }
+            { "month": 0, "pct": 40, "done": true }
           ]
         },
         {
@@ -650,11 +502,7 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 0.4,
-              "end": 1.48,
-              "color": "#7F77DD"
-            }
+            { "start": 0.4, "end": 1.48, "color": "#7F77DD" }
           ]
         },
         {
@@ -664,29 +512,21 @@
           "risk_level": ""
         },
         {
-          "label": "Pallet Lift & Platofrm Delivery",
+          "label": "Pallet Lift & Platform Delivery",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 0.14,
-              "end": 1.74,
-              "color": "#7F77DD"
-            }
+            { "start": 0.14, "end": 1.74, "color": "#7F77DD" }
           ]
         },
         {
-          "label": "Installation & Commissioning ",
+          "label": "Installation & Commissioning",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 1.74,
-              "end": 3.47,
-              "color": "#7F77DD"
-            }
+            { "start": 1.74, "end": 3.47, "color": "#7F77DD" }
           ]
         },
         {
@@ -701,11 +541,7 @@
           "is_critical_path": false,
           "risk_level": "medium",
           "bars": [
-            {
-              "start": 1.02,
-              "end": 2.46,
-              "color": "#AFA9EC"
-            }
+            { "start": 1.02, "end": 2.46, "color": "#AFA9EC" }
           ]
         },
         {
@@ -714,27 +550,11 @@
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
-            {
-              "start": 3.02,
-              "end": 6.55,
-              "color": "#7F77DD"
-            }
+            { "start": 3.02, "end": 6.55, "color": "#7F77DD" }
           ]
         },
         {
-          "label": "",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
           "label": "--- Direct to Pouch Printing (TTO Pouchmark Qty x2)",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
-          "label": "",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": ""
@@ -746,139 +566,43 @@
           "risk_level": ""
         },
         {
-          "label": "",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
           "label": "--- Dried Fruit DeClumper (Valley)",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
-          "label": "",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
-          "label": "",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        },
-        {
-          "label": "",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": ""
         }
       ],
       "capital_items": [
-        {
-          "item": "Complete preformed bagging line - Viking Masek 8S-285",
-          "amount": 465000,
-          "category": "Capital"
-        },
-        {
-          "item": "New mezzanine - structure",
-          "amount": 450000,
-          "category": "Capital"
-        },
-        {
-          "item": "Electrical installation (new & relocating baggers)",
-          "amount": 355000,
-          "category": "Capital"
-        },
-        {
-          "item": "Mechanical (plumbing, ducting, HVAC)",
-          "amount": 192000,
-          "category": "Capital"
-        },
-        {
-          "item": "New mezzanine - fire protection",
-          "amount": 150000,
-          "category": "Capital"
-        },
-        {
-          "item": "VF100e semi-automated fillers x6 (All-Fill)",
-          "amount": 122000,
-          "category": "Capital"
-        },
-        {
-          "item": "Drains for roasting (80LF + grease trap)",
-          "amount": 83300,
-          "category": "Capital"
-        },
-        {
-          "item": "Direct pouch printing - PouchMark FLOW XT500 x2",
-          "amount": 80000,
-          "category": "Capital"
-        },
-        {
-          "item": "Dried fruit declumper (Whirlwind Engineering)",
-          "amount": 70000,
-          "category": "Capital"
-        },
-        {
-          "item": "Powder filler - TBD (Viking or All-Fill)",
-          "amount": 65000,
-          "category": "Capital"
-        },
-        {
-          "item": "Nitrogen generator - N2GEN TS (backflush)",
-          "amount": 65000,
-          "category": "Capital"
-        },
-        {
-          "item": "New mezzanine - lighting",
-          "amount": 45000,
-          "category": "Capital"
-        },
-        {
-          "item": "Additional stainless steel tables & conveyors",
-          "amount": 30000,
-          "category": "Capital"
-        },
-        {
-          "item": "New custom tray line on mezz",
-          "amount": 30000,
-          "category": "Capital"
-        },
-        {
-          "item": "Pallet lift tables x3",
-          "amount": 25000,
-          "category": "Capital"
-        },
-        {
-          "item": "Stainless steel work platforms x3",
-          "amount": 10000,
-          "category": "Capital"
-        },
-        {
-          "item": "20% contingency (base case)",
-          "amount": 728712,
-          "category": "Contingency"
-        },
-        {
-          "item": "Project expenses (engineering, commissioning)",
-          "amount": 27500,
-          "category": "Expense"
-        }
+        { "item": "Complete preformed bagging line - Viking Masek 8S-285", "amount": 465000, "category": "Capital" },
+        { "item": "New mezzanine - structure", "amount": 450000, "category": "Capital" },
+        { "item": "Electrical installation (new & relocating baggers)", "amount": 355000, "category": "Capital" },
+        { "item": "Mechanical (plumbing, ducting, HVAC)", "amount": 192000, "category": "Capital" },
+        { "item": "New mezzanine - fire protection", "amount": 150000, "category": "Capital" },
+        { "item": "VF100e semi-automated fillers x6 (All-Fill)", "amount": 122000, "category": "Capital" },
+        { "item": "Drains for roasting (80LF + grease trap)", "amount": 83300, "category": "Capital" },
+        { "item": "Direct pouch printing - PouchMark FLOW XT500 x2", "amount": 80000, "category": "Capital" },
+        { "item": "Dried fruit declumper (Whirlwind Engineering)", "amount": 70000, "category": "Capital" },
+        { "item": "Powder filler - TBD (Viking or All-Fill)", "amount": 65000, "category": "Capital" },
+        { "item": "Nitrogen generator - N2GEN TS (backflush)", "amount": 65000, "category": "Capital" },
+        { "item": "New mezzanine - lighting", "amount": 45000, "category": "Capital" },
+        { "item": "Additional stainless steel tables & conveyors", "amount": 30000, "category": "Capital" },
+        { "item": "New custom tray line on mezz", "amount": 30000, "category": "Capital" },
+        { "item": "Pallet lift tables x3", "amount": 25000, "category": "Capital" },
+        { "item": "Stainless steel work platforms x3", "amount": 10000, "category": "Capital" },
+        { "item": "20% contingency (base case)", "amount": 728712, "category": "Contingency" },
+        { "item": "Project expenses (engineering, commissioning)", "amount": 27500, "category": "Expense" }
       ]
     }
   ],
   "pipeline": [
     {
-      "name": "Automated Chocolate Panning (Dumoulin or Similar) ",
+      "name": "Automated Chocolate Panning (Dumoulin or Similar)",
       "investment": 1800000,
       "savings": 1200000,
       "estimated_approval_date": "Q3 2026"
     },
     {
-      "name": "Raw Material Storage (AS/RS or Similar) ",
+      "name": "Raw Material Storage (AS/RS or Similar)",
       "investment": 2100000,
       "savings": 1000000,
       "estimated_approval_date": "Q3 2026"
@@ -890,7 +614,7 @@
       "estimated_approval_date": "Q4 2026"
     },
     {
-      "name": "Non-ROI Upgrades (Infrastructure, Cooler, etc) )",
+      "name": "Non-ROI Upgrades (Infrastructure, Cooler, etc)",
       "investment": 1000000,
       "savings": null,
       "estimated_approval_date": "Q4 2026"
@@ -899,7 +623,7 @@
   "cashflow": [
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Milestone 1 ? 30% deposit paid",
+      "item": "Milestone 1 - 30% deposit paid",
       "po": "60018",
       "amount": 659100,
       "date": "Mar 2026",
@@ -908,7 +632,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Milestone 2 ? 30% on delivery",
+      "item": "Milestone 2 - 30% on delivery",
       "po": "60018",
       "amount": 659100,
       "date": "Jun 2026",
@@ -917,7 +641,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Milestone 3 ? 30% on system compliance",
+      "item": "Milestone 3 - 30% on system compliance",
       "po": "60018",
       "amount": 659100,
       "date": "Sep 2026",
@@ -926,7 +650,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Milestone 4 ? 10% final acceptance",
+      "item": "Milestone 4 - 10% final acceptance",
       "po": "60018",
       "amount": 219700,
       "date": "Nov 2026",
@@ -935,7 +659,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Spare Parts ",
+      "item": "Spare Parts",
       "po": "TBD",
       "amount": 59743.84,
       "date": "Jul 2026",
@@ -944,7 +668,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "item": "Viking Masek - New rotary pouch filler - initial deposit",
       "po": "60025 / Inv 58353",
       "amount": 348628.5,
       "date": "Mar 2026",
@@ -953,7 +677,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "item": "Viking Masek - New rotary pouch filler - 2nd payment",
       "po": "60025 / Inv 58353",
       "amount": 209177.1,
       "date": "Mar 2026",
@@ -962,7 +686,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "item": "Viking Masek - New rotary pouch filler - 3rd payment",
       "po": "60025 / Inv 58353",
       "amount": 69725.7,
       "date": "Mar 2026",
@@ -971,7 +695,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - New rotary pouch filler ? initial deposit",
+      "item": "Viking Masek - New rotary pouch filler - final payment",
       "po": "60025 / Inv 58353",
       "amount": 69725.7,
       "date": "Mar 2026",
