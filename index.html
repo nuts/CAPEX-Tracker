@@ -1,15 +1,4 @@
-<style>
-body{font-family:system-ui,sans-serif;padding:2rem;background:transparent}
-h2{font-size:15px;font-weight:500;margin-bottom:8px}
-p{font-size:13px;color:#666;margin-bottom:20px}
-a.dl{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:500}
-</style>
-<h2>Download the fixed index.html</h2>
-<p>Click below to download the clean, correct index.html file — then upload it to your GitHub repo replacing the current broken one.</p>
-<a class="dl" id="dl" href="#">⬇ Download index.html</a>
-
-<script>
-var html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -92,7 +81,7 @@ function pct(a,b){return Math.min(100,Math.round(a/b*100));}
 function bdg(t){
   var m={active:["bactive","Active"],paid:["bpaid","Paid"],pending:["bpending","Pending"],contract:["bcontract","Contracted"],complete:["bpaid","Complete"],"on-hold":["bpending","On Hold"]};
   var s=m[t]||["bpending",t];
-  return "<span class=\\"badge "+s[0]+"\\">"+s[1]+"</span>";
+  return '<span class="badge '+s[0]+'">'+s[1]+'</span>';
 }
 function showTab(id,btn){
   document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("on");});
@@ -102,7 +91,7 @@ function showTab(id,btn){
 }
 function buildCashflow(cashflow){
   if(!cashflow||cashflow.length===0){
-    return "<p style=\\"color:#888;font-size:13px;padding:1rem 0;\\">No cash flow data. Update the POs tab and republish.</p>";
+    return '<p style="color:#888;font-size:13px;padding:1rem 0;">No cash flow data available.</p>';
   }
   var MORDER=["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026","Oct 2026","Nov 2026","Dec 2026"];
   var pcolors={};
@@ -123,37 +112,38 @@ function buildCashflow(cashflow){
   var paid=cashflow.filter(function(r){return r.status==="paid";}).reduce(function(s,r){return s+r.amount;},0);
   var pend=cashflow.filter(function(r){return r.status==="pending";}).reduce(function(s,r){return s+r.amount;},0);
   var conf=cashflow.filter(function(r){return r.confirmed;}).reduce(function(s,r){return s+r.amount;},0);
-  var h="<div style=\\"display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem;\\">"
+  var h='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem;">'
     +[{l:"Total projected spend",v:fmt(total),s:"All projects"},{l:"Paid to date",v:fmt(paid),s:"Confirmed invoices"},{l:"Remaining to pay",v:fmt(pend),s:"Pending milestones"},{l:"Confirmed dates",v:fmt(conf),s:Math.round(conf/total*100)+"% of total"}]
-    .map(function(m){return "<div style=\\"background:#f1f0eb;border-radius:8px;padding:12px 14px;\\"><div style=\\"font-size:11px;color:#777;margin-bottom:3px;\\">"+m.l+"</div><div style=\\"font-size:18px;font-weight:600;\\">"+m.v+"</div><div style=\\"font-size:11px;color:#999;margin-top:2px;\\">"+m.s+"</div></div>";}).join("")+"</div>";
-  h+="<div style=\\"margin-bottom:1.5rem;\\"><div style=\\"font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;\\">Monthly cash outflow</div><div style=\\"display:flex;align-items:flex-end;gap:6px;height:180px;padding-bottom:24px;border-bottom:1px solid #e0e0e0;\\">";
+    .map(function(m){return '<div style="background:#f1f0eb;border-radius:8px;padding:12px 14px;"><div style="font-size:11px;color:#777;margin-bottom:3px;">'+m.l+'</div><div style="font-size:18px;font-weight:600;">'+m.v+'</div><div style="font-size:11px;color:#999;margin-top:2px;">'+m.s+'</div></div>';}).join('')+'</div>';
+  h+='<div style="margin-bottom:1.5rem;"><div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Monthly cash outflow</div><div style="display:flex;align-items:flex-end;gap:6px;height:180px;padding-bottom:24px;border-bottom:1px solid #e0e0e0;">';
   months.forEach(function(m,i){
     var hh=Math.round((mtotals[i]/maxB)*150);
     var ip=byMonth[m].every(function(r){return r.status==="paid";});
     var ipart=byMonth[m].some(function(r){return r.status==="paid";})&&!ip;
     var bg=ip?"#378ADD":ipart?"#85B7EB":"#D3D1C7";
     var cp=Math.round(cum[i]/total*100);
-    h+="<div style=\\"flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;\\"><div style=\\"font-size:9px;color:#888;\\">"+fmt(mtotals[i])+"</div><div style=\\"width:100%;height:"+hh+"px;background:"+bg+";border-radius:3px 3px 0 0;min-height:4px;\\"></div><div style=\\"font-size:10px;color:#666;margin-top:2px;white-space:nowrap;\\">"+m.replace(" 2026","")+"</div><div style=\\"font-size:9px;color:#aaa;\\">"+cp+"%</div></div>";
+    h+='<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="font-size:9px;color:#888;">'+fmt(mtotals[i])+'</div><div style="width:100%;height:'+hh+'px;background:'+bg+';border-radius:3px 3px 0 0;min-height:4px;"></div><div style="font-size:10px;color:#666;margin-top:2px;white-space:nowrap;">'+m.replace(" 2026","")+'</div><div style="font-size:9px;color:#aaa;">'+cp+'%</div></div>';
   });
-  h+="</div><div style=\\"display:flex;gap:16px;font-size:11px;color:#666;margin-top:8px;flex-wrap:wrap;\\"><span><span style=\\"display:inline-block;width:10px;height:10px;border-radius:2px;background:#378ADD;margin-right:4px;vertical-align:middle;\\"></span>Paid</span><span><span style=\\"display:inline-block;width:10px;height:10px;border-radius:2px;background:#85B7EB;margin-right:4px;vertical-align:middle;\\"></span>Partial</span><span><span style=\\"display:inline-block;width:10px;height:10px;border-radius:2px;background:#D3D1C7;margin-right:4px;vertical-align:middle;\\"></span>Pending</span></div></div>";
+  h+='</div><div style="display:flex;gap:16px;font-size:11px;color:#666;margin-top:8px;flex-wrap:wrap;"><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#378ADD;margin-right:4px;vertical-align:middle;"></span>Paid</span><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#85B7EB;margin-right:4px;vertical-align:middle;"></span>Partial</span><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#D3D1C7;margin-right:4px;vertical-align:middle;"></span>Pending</span></div></div>';
   var pt={};cashflow.forEach(function(r){pt[r.project]=(pt[r.project]||0)+r.amount;});
-  h+="<div style=\\"margin-bottom:1.5rem;\\"><div style=\\"font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;\\">Spend by project</div><div style=\\"display:flex;height:28px;border-radius:6px;overflow:hidden;gap:1px;\\">";
-  Object.keys(pt).forEach(function(p){var w=(pt[p]/total*100).toFixed(1);h+="<div style=\\"width:"+w+"%;background:"+(pcolors[p]||"#ccc")+";display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;overflow:hidden;white-space:nowrap;padding:0 4px;\\" title=\\""+p+": "+fmt(pt[p])+"\\">"+w+"%</div>";});
-  h+="</div><div style=\\"display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;font-size:11px;color:#666;\\">";
-  Object.keys(pt).forEach(function(p){h+="<span><span style=\\"display:inline-block;width:10px;height:10px;border-radius:2px;background:"+(pcolors[p]||"#ccc")+";margin-right:4px;vertical-align:middle;\\"></span>"+p+" "+fmt(pt[p])+"</span>";});
-  h+="</div></div>";
-  h+="<div style=\\"font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;\\">Payment detail</div><div style=\\"background:#faeeda;border-radius:8px;padding:8px 12px;font-size:11px;color:#854f0b;margin-bottom:12px;\\"><strong>Source:</strong> Pulled from POs tab. Paid=confirmed, Pending=estimated.</div><table style=\\"width:100%;border-collapse:collapse;\\"><thead><tr style=\\"border-bottom:1px solid #e0e0e0;\\"><th style=\\"padding:4px 8px;color:#888;font-weight:600;width:20px;\\"></th><th style=\\"padding:4px 8px;color:#888;font-weight:600;text-align:left;\\">Project</th><th style=\\"padding:4px 8px;color:#888;font-weight:600;text-align:left;\\">Description</th><th style=\\"padding:4px 8px;color:#888;font-weight:600;text-align:right;\\">Amount</th></tr></thead><tbody>";
+  h+='<div style="margin-bottom:1.5rem;"><div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Spend by project</div><div style="display:flex;height:28px;border-radius:6px;overflow:hidden;gap:1px;">';
+  Object.keys(pt).forEach(function(p){var w=(pt[p]/total*100).toFixed(1);h+='<div style="width:'+w+'%;background:'+(pcolors[p]||"#ccc")+';display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;overflow:hidden;white-space:nowrap;padding:0 4px;" title="'+p+': '+fmt(pt[p])+'">'+w+'%</div>';});
+  h+='</div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;font-size:11px;color:#666;">';
+  Object.keys(pt).forEach(function(p){h+='<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:'+(pcolors[p]||"#ccc")+';margin-right:4px;vertical-align:middle;"></span>'+p+' '+fmt(pt[p])+'</span>';});
+  h+='</div></div>';
+  h+='<div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Payment detail</div><div style="background:#faeeda;border-radius:8px;padding:8px 12px;font-size:11px;color:#854f0b;margin-bottom:12px;"><strong>Source:</strong> Pulled from POs tab. Paid = confirmed, Pending = estimated.</div>';
+  h+='<table style="width:100%;border-collapse:collapse;"><thead><tr style="border-bottom:1px solid #e0e0e0;"><th style="padding:4px 8px;color:#888;font-weight:600;width:20px;"></th><th style="padding:4px 8px;color:#888;font-weight:600;text-align:left;">Project</th><th style="padding:4px 8px;color:#888;font-weight:600;text-align:left;">Description</th><th style="padding:4px 8px;color:#888;font-weight:600;text-align:right;">Amount</th></tr></thead><tbody>';
   var rt=0;
   months.forEach(function(m){
     var mt=byMonth[m].reduce(function(s,r){return s+r.amount;},0);rt+=mt;
-    h+="<tr style=\\"background:#f5f5f3;\\"><td colspan=\\"4\\" style=\\"padding:6px 8px;font-size:12px;font-weight:600;color:#111;border-bottom:1px solid #e0e0e0;\\">"+m+"<span style=\\"float:right;font-weight:400;color:#888;font-size:11px;\\">Month: "+fmt(mt)+" &nbsp; Cumulative: "+fmt(rt)+"</span></td></tr>";
+    h+='<tr style="background:#f5f5f3;"><td colspan="4" style="padding:6px 8px;font-size:12px;font-weight:600;color:#111;border-bottom:1px solid #e0e0e0;">'+m+'<span style="float:right;font-weight:400;color:#888;font-size:11px;">Month: '+fmt(mt)+'&nbsp;&nbsp;Cumulative: '+fmt(rt)+'</span></td></tr>';
     byMonth[m].forEach(function(r){
-      var dot=r.confirmed?"<span style=\\"color:#0f6e56;font-size:14px;\\">&#9679;</span>":"<span style=\\"color:#aaa;font-size:14px;\\">&#9675;</span>";
-      var badge=r.status==="paid"?"<span style=\\"background:#e1f5ee;color:#0f6e56;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;\\">Paid</span>":"<span style=\\"background:#f1f0eb;color:#888;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;\\">Pending</span>";
-      h+="<tr style=\\"border-bottom:0.5px solid #f0f0f0;\\"><td style=\\"padding:4px 8px;\\">"+dot+"</td><td style=\\"padding:4px 8px;font-size:11px;\\"><span style=\\"display:inline-block;width:8px;height:8px;border-radius:2px;background:"+(pcolors[r.project]||"#ccc")+";margin-right:6px;vertical-align:middle;\\"></span><span style=\\"color:#111;\\">"+r.project+"</span></td><td style=\\"padding:4px 8px;font-size:11px;color:#666;\\">"+r.item+"</td><td style=\\"padding:4px 8px;font-size:11px;text-align:right;font-weight:600;color:#111;white-space:nowrap;\\">"+fmt(r.amount)+" "+badge+"</td></tr>";
+      var dot=r.confirmed?'<span style="color:#0f6e56;font-size:14px;">&#9679;</span>':'<span style="color:#aaa;font-size:14px;">&#9675;</span>';
+      var badge=r.status==="paid"?'<span style="background:#e1f5ee;color:#0f6e56;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;">Paid</span>':'<span style="background:#f1f0eb;color:#888;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;">Pending</span>';
+      h+='<tr style="border-bottom:0.5px solid #f0f0f0;"><td style="padding:4px 8px;">'+dot+'</td><td style="padding:4px 8px;font-size:11px;"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+(pcolors[r.project]||"#ccc")+';margin-right:6px;vertical-align:middle;"></span><span style="color:#111;">'+r.project+'</span></td><td style="padding:4px 8px;font-size:11px;color:#666;">'+r.item+'</td><td style="padding:4px 8px;font-size:11px;text-align:right;font-weight:600;color:#111;white-space:nowrap;">'+fmt(r.amount)+' '+badge+'</td></tr>';
     });
   });
-  h+="</tbody><tfoot><tr style=\\"border-top:2px solid #ddd;background:#f1f0eb;\\"><td colspan=\\"3\\" style=\\"padding:6px 8px;font-size:12px;font-weight:700;color:#111;\\">Total projected outflow</td><td style=\\"padding:6px 8px;font-size:12px;font-weight:700;color:#111;text-align:right;\\">"+fmt(total)+"</td></tr></tfoot></table>";
+  h+='</tbody><tfoot><tr style="border-top:2px solid #ddd;background:#f1f0eb;"><td colspan="3" style="padding:6px 8px;font-size:12px;font-weight:700;color:#111;">Total projected outflow</td><td style="padding:6px 8px;font-size:12px;font-weight:700;color:#111;text-align:right;">'+fmt(total)+'</td></tr></tfoot></table>';
   return h;
 }
 function render(d){
@@ -163,42 +153,42 @@ function render(d){
   var ta=d.projects.reduce(function(s,p){return s+p.approved_budget;},0);
   var tp=d.projects.reduce(function(s,p){return s+p.paid_to_date;},0);
   var ts=d.projects.reduce(function(s,p){return s+p.annualized_savings;},0);
-  var bp=d.projects.find(function(p){return p.id==="brightpick";})||d.projects[0];
-  var metrics="<div class=\\"metrics\\">"+[{l:"Total approved budget",v:fmt(ta),s:"Across "+d.projects.length+" projects"},{l:"Brightpick contract value",v:fmt(bp.contract_total),s:fmt(bp.approved_budget-bp.contract_total)+" under approved"},{l:"Total paid to date",v:fmt(tp),s:pct(tp,ta)+"% of approved budget"},{l:"Combined annualized savings",v:fmt(ts),s:"Across all active projects"}].map(function(m){return "<div class=\\"metric\\"><div class=\\"ml\\">"+m.l+"</div><div class=\\"mv\\">"+m.v+"</div><div class=\\"ms\\">"+m.s+"</div></div>";}).join("")+"</div>";
+  var bp=d.projects.find(function(p){return p.id==="brightpick-phase-1-nj";})||d.projects[0];
+  var metrics='<div class="metrics">'+[{l:"Total approved budget",v:fmt(ta),s:"Across "+d.projects.length+" projects"},{l:"Brightpick contract value",v:fmt(bp.contract_total),s:fmt(bp.approved_budget-bp.contract_total)+" under approved"},{l:"Total paid to date",v:fmt(tp),s:pct(tp,ta)+"% of approved budget"},{l:"Combined annualized savings",v:fmt(ts),s:"Across all active projects"}].map(function(m){return '<div class="metric"><div class="ml">'+m.l+'</div><div class="mv">'+m.v+'</div><div class="ms">'+m.s+'</div></div>';}).join('')+'</div>';
   var gRows="";
   d.projects.forEach(function(proj){
-    gRows+="<tr class=\\"ph\\"><td colspan=\\""+( N+1)+"\\">"+proj.name+" &nbsp;"+bdg(proj.status)+"&nbsp;<span style=\\"font-size:11px;font-weight:400;opacity:.7\\">Approved "+fmt(proj.approved_budget)+" - Contract "+fmt(proj.contract_total)+" - Savings "+fmt(proj.annualized_savings)+"/yr</span></td></tr>";
+    gRows+='<tr class="ph"><td colspan="'+(N+1)+'">'+proj.name+'&nbsp;'+bdg(proj.status)+'&nbsp;<span style="font-size:11px;font-weight:400;opacity:.7">Approved '+fmt(proj.approved_budget)+' - Contract '+fmt(proj.contract_total)+' - Savings '+fmt(proj.annualized_savings)+'/yr</span></td></tr>';
     (proj.gantt||[]).forEach(function(task){
       var isSub=task.is_subheader;
       var isCp=task.is_critical_path;
       var bg=isSub?"background:#f5f5f3;":"";
       var lc="lbl"+(isSub?" sh":isCp?" cp":"");
-      gRows+="<tr><td class=\\""+lc+"\\" style=\\""+bg+"\\">"+task.label+"</td><td colspan=\\""+N+"\\" style=\\"padding:0;"+bg+"\\"><div style=\\"position:relative;height:22px;width:100%;\\">";
+      gRows+='<tr><td class="'+lc+'" style="'+bg+'">'+task.label+'</td><td colspan="'+N+'" style="padding:0;'+bg+'"><div style="position:relative;height:22px;width:100%;">';
       (task.bars||[]).forEach(function(b){
         var l=(b.start/N)*100,w=((b.end-b.start)/N)*100;
         var bc=isCp?"#C0392B":b.color;
-        gRows+="<div style=\\"position:absolute;top:4px;height:14px;border-radius:3px;left:"+l.toFixed(2)+"%;width:"+w.toFixed(2)+"%;background:"+bc+";opacity:0.9;\\"></div>";
+        gRows+='<div style="position:absolute;top:4px;height:14px;border-radius:3px;left:'+l.toFixed(2)+'%;width:'+w.toFixed(2)+'%;background:'+bc+';opacity:0.9;"></div>';
       });
       (task.milestones||[]).forEach(function(ms){
         var l=((ms.month+(ms.pct/100))/N)*100;
-        gRows+="<div style=\\"position:absolute;top:3px;left:"+l.toFixed(2)+"%;transform:translateX(-50%);font-size:15px;line-height:1;color:"+(ms.done?"#639922":"#EF9F27")+";\\">&#9670;</div>";
+        gRows+='<div style="position:absolute;top:3px;left:'+l.toFixed(2)+'%;transform:translateX(-50%);font-size:15px;line-height:1;color:'+(ms.done?"#639922":"#EF9F27")+';">&#9670;</div>';
       });
-      gRows+="</div></td></tr>";
+      gRows+='</div></td></tr>';
     });
   });
-  var gantt="<div class=\\"legend\\"><span><span class=\\"sw\\" style=\\"background:#378ADD\\"></span>Brightpick</span><span><span class=\\"sw\\" style=\\"background:#1D9E75\\"></span>Mezzanine</span><span><span class=\\"sw\\" style=\\"background:#EF9F27\\"></span>Viking</span><span><span class=\\"sw\\" style=\\"background:#7F77DD\\"></span>All-Fill</span><span><span class=\\"sw\\" style=\\"background:#C0392B\\"></span>Critical path</span><span><span style=\\"color:#639922;font-size:15px;\\">&#9670;</span> Complete</span><span><span style=\\"color:#EF9F27;font-size:15px;\\">&#9670;</span> Pending</span></div><div class=\\"gwrap\\"><table class=\\"g\\"><thead><tr><th class=\\"lc\\">Task</th>"+MONTHS.map(function(m){return "<th>"+m+"</th>";}).join("")+"</tr></thead><tbody>"+gRows+"</tbody></table></div>";
+  var gantt='<div class="legend"><span><span class="sw" style="background:#378ADD"></span>Brightpick</span><span><span class="sw" style="background:#1D9E75"></span>Mezzanine</span><span><span class="sw" style="background:#EF9F27"></span>Viking</span><span><span class="sw" style="background:#7F77DD"></span>All-Fill</span><span><span class="sw" style="background:#C0392B"></span>Critical path</span><span><span style="color:#639922;font-size:15px;">&#9670;</span> Complete</span><span><span style="color:#EF9F27;font-size:15px;">&#9670;</span> Pending</span></div><div class="gwrap"><table class="g"><thead><tr><th class="lc">Task</th>'+MONTHS.map(function(m){return "<th>"+m+"</th>";}).join('')+'</tr></thead><tbody>'+gRows+'</tbody></table></div>';
   var tc=d.projects.reduce(function(s,p){return s+p.contract_total;},0);
   var budget="";
-  if(d.open_items&&d.open_items.length){budget+="<div class=\\"alert\\"><strong>Open items:</strong><ul>"+d.open_items.map(function(i){return "<li>"+i+"</li>";}).join("")+"</ul></div>";}
+  if(d.open_items&&d.open_items.length){budget+='<div class="alert"><strong>Open items:</strong><ul>'+d.open_items.map(function(i){return "<li>"+i+"</li>";}).join('')+'</ul></div>';}
   d.projects.forEach(function(proj){
-    var pr=proj.pos.map(function(po){return "<tr><td class=\\"n\\">"+po.po+"</td><td>"+po.vendor+"</td><td>"+po.description+"</td><td style=\\"white-space:nowrap\\">"+po.date+"</td><td class=\\"r\\">"+fmt(po.amount)+"</td><td>"+bdg(po.type)+"</td></tr>";}).join("");
-    budget+="<div class=\\"card\\"><div class=\\"card-hdr\\"><span class=\\"card-title\\">"+proj.name+"</span>"+bdg(proj.status)+"</div><div class=\\"card-sub\\">Approved "+fmt(proj.approved_budget)+" - Contract "+fmt(proj.contract_total)+" - "+fmt(proj.annualized_savings)+"/yr savings</div>"+[{l:"Approved budget",v:proj.approved_budget,w:100,c:"#e0e0e0"},{l:"Contracted",v:proj.contract_total,w:pct(proj.contract_total,proj.approved_budget),c:proj.color},{l:"Paid to date",v:proj.paid_to_date,w:pct(proj.paid_to_date,proj.approved_budget),c:proj.color_light},{l:"Remaining",v:proj.approved_budget-proj.paid_to_date,w:pct(proj.approved_budget-proj.paid_to_date,proj.approved_budget),c:"#d3d3d3"}].map(function(r){return "<div class=\\"brow\\"><div class=\\"brow-lbl\\"><span>"+r.l+"</span><b>"+fmt(r.v)+"</b></div><div class=\\"bg\\"><div class=\\"bf\\" style=\\"width:"+r.w+"%;background:"+r.c+"\\"></div></div></div>";}).join("")+"<div class=\\"divider\\"><div class=\\"slbl\\">PO detail</div><table><thead><tr><th>PO</th><th>Vendor</th><th>Description</th><th>Date</th><th style=\\"text-align:right\\">Amount</th><th>Status</th></tr></thead><tbody>"+pr+"<tr class=\\"tot\\"><td colspan=\\"4\\">Paid to date</td><td class=\\"r\\">"+fmt(proj.paid_to_date)+"</td><td></td></tr></tbody></table>"+(proj.note?"<div class=\\"note\\">"+proj.note+"</div>":"")+"</div></div>";
+    var pr=proj.pos.map(function(po){return '<tr><td class="n">'+po.po+'</td><td>'+po.vendor+'</td><td>'+po.description+'</td><td style="white-space:nowrap">'+po.date+'</td><td class="r">'+fmt(po.amount)+'</td><td>'+bdg(po.type)+'</td></tr>';}).join('');
+    budget+='<div class="card"><div class="card-hdr"><span class="card-title">'+proj.name+'</span>'+bdg(proj.status)+'</div><div class="card-sub">Approved '+fmt(proj.approved_budget)+' - Contract '+fmt(proj.contract_total)+' - '+fmt(proj.annualized_savings)+'/yr savings</div>'+[{l:"Approved budget",v:proj.approved_budget,w:100,c:"#e0e0e0"},{l:"Contracted",v:proj.contract_total,w:pct(proj.contract_total,proj.approved_budget),c:proj.color},{l:"Paid to date",v:proj.paid_to_date,w:pct(proj.paid_to_date,proj.approved_budget),c:proj.color},{l:"Remaining",v:proj.approved_budget-proj.paid_to_date,w:pct(proj.approved_budget-proj.paid_to_date,proj.approved_budget),c:"#d3d3d3"}].map(function(r){return '<div class="brow"><div class="brow-lbl"><span>'+r.l+'</span><b>'+fmt(r.v)+'</b></div><div class="bg"><div class="bf" style="width:'+r.w+'%;background:'+r.c+'"></div></div></div>';}).join('')+'<div class="divider"><div class="slbl">PO detail</div><table><thead><tr><th>PO</th><th>Vendor</th><th>Description</th><th>Date</th><th style="text-align:right">Amount</th><th>Status</th></tr></thead><tbody>'+pr+'<tr class="tot"><td colspan="4">Paid to date</td><td class="r">'+fmt(proj.paid_to_date)+'</td><td></td></tr></tbody></table>'+(proj.note?'<div class="note">'+proj.note+'</div>':'')+'</div></div>';
   });
-  budget+="<div class=\\"sbox\\"><div class=\\"slbl\\" style=\\"margin-bottom:8px\\">Combined summary</div>"+[["Total approved",fmt(ta)],["Total contracted",fmt(tc)],["Paid to date",fmt(tp)],["Remaining uncontracted",fmt(ta-tc)]].map(function(r){return "<div class=\\"srow\\"><span class=\\"sl\\">"+r[0]+"</span><span class=\\"sv\\">"+r[1]+"</span></div>";}).join("")+"</div>";
+  budget+='<div class="sbox"><div class="slbl" style="margin-bottom:8px">Combined summary</div>'+[["Total approved",fmt(ta)],["Total contracted",fmt(tc)],["Paid to date",fmt(tp)],["Remaining uncontracted",fmt(ta-tc)]].map(function(r){return '<div class="srow"><span class="sl">'+r[0]+'</span><span class="sv">'+r[1]+'</span></div>';}).join('')+'</div>';
   var tpp=d.pipeline.reduce(function(s,p){return s+p.investment;},0);
   var tps=d.pipeline.filter(function(p){return p.savings;}).reduce(function(s,p){return s+p.savings;},0);
-  var pipeline="<p style=\\"font-size:12px;color:#888;margin-bottom:12px\\">Next wave - pending board approval.</p>"+d.pipeline.map(function(p){return "<div class=\\"pitem\\"><span class=\\"pname\\">"+p.name+"</span><div class=\\"pr\\"><span class=\\"pa\\">"+fmt(p.investment)+"</span>"+(p.savings?"<span class=\\"ps\\">"+fmt(p.savings)+"/yr</span>":"")+(p.estimated_approval_date?"<span class=\\"ps\\">Est: "+p.estimated_approval_date+"</span>":"")+bdg("pending")+"</div></div>";}).join("")+"<div class=\\"sbox\\"><div class=\\"srow\\"><span class=\\"sl\\">Total pipeline</span><span class=\\"sv\\">"+fmt(tpp)+"</span></div><div class=\\"srow\\"><span class=\\"sl\\">Combined savings (ex. infra)</span><span class=\\"sv\\">"+fmt(tps)+"/yr</span></div></div>";
-  app.innerHTML="<h1>"+d.meta.title+"</h1><div class=\\"sub\\">"+d.meta.facility+" - "+d.meta.fiscal_year+" - Updated "+d.meta.last_updated+" by "+d.meta.last_updated_by+"</div>"+metrics+"<div class=\\"tabs\\"><button class=\\"tab on\\" onclick=\\"showTab('gantt',this)\\">Timeline</button><button class=\\"tab\\" onclick=\\"showTab('budget',this)\\">Budget &amp; POs</button><button class=\\"tab\\" onclick=\\"showTab('pipeline',this)\\">Pipeline</button><button class=\\"tab\\" onclick=\\"showTab('cashflow',this)\\">Cash Flow</button></div><div id=\\"gantt\\" class=\\"panel on\\">"+gantt+"</div><div id=\\"budget\\" class=\\"panel\\">"+budget+"</div><div id=\\"pipeline\\" class=\\"panel\\">"+pipeline+"</div><div id=\\"cashflow\\" class=\\"panel\\">"+buildCashflow(d.cashflow||[])+"</div><div class=\\"footer\\">Sources: Ryan McVeigh PO Tracker (Apr 7) - Brightpick Agreement - PJ Oleksak SLT announcement (Feb 27)</div>";
+  var pipeline='<p style="font-size:12px;color:#888;margin-bottom:12px">Next wave - pending board approval.</p>'+d.pipeline.map(function(p){return '<div class="pitem"><span class="pname">'+p.name+'</span><div class="pr"><span class="pa">'+fmt(p.investment)+'</span>'+(p.savings?'<span class="ps">'+fmt(p.savings)+'/yr</span>':'')+(p.estimated_approval_date?'<span class="ps">Est: '+p.estimated_approval_date+'</span>':'')+bdg("pending")+'</div></div>';}).join('')+'<div class="sbox"><div class="srow"><span class="sl">Total pipeline</span><span class="sv">'+fmt(tpp)+'</span></div><div class="srow"><span class="sl">Combined savings (ex. infra)</span><span class="sv">'+fmt(tps)+'/yr</span></div></div>';
+  app.innerHTML='<h1>'+d.meta.title+'</h1><div class="sub">'+d.meta.facility+' - '+d.meta.fiscal_year+' - Updated '+d.meta.last_updated+' by '+d.meta.last_updated_by+'</div>'+metrics+'<div class="tabs"><button class="tab on" onclick="showTab(\'gantt\',this)">Timeline</button><button class="tab" onclick="showTab(\'budget\',this)">Budget &amp; POs</button><button class="tab" onclick="showTab(\'pipeline\',this)">Pipeline</button><button class="tab" onclick="showTab(\'cashflow\',this)">Cash Flow</button></div><div id="gantt" class="panel on">'+gantt+'</div><div id="budget" class="panel">'+budget+'</div><div id="pipeline" class="panel">'+pipeline+'</div><div id="cashflow" class="panel">'+buildCashflow(d.cashflow||[])+'</div><div class="footer">Sources: Ryan McVeigh PO Tracker (Apr 7) - Brightpick Agreement - PJ Oleksak SLT announcement (Feb 27)</div>';
 }
 fetch("data.json?v="+Date.now())
   .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
@@ -207,16 +197,8 @@ fetch("data.json?v="+Date.now())
     document.getElementById("loading").style.display="none";
     var err=document.getElementById("error");
     err.style.display="block";
-    err.innerHTML="<strong>Failed to load data.json</strong><br>"+e.message;
+    err.innerHTML="<strong>Failed to load data.json</strong><br>"+e.message+"<br><small>Make sure data.json is in the same folder as index.html</small>";
   });
-<\/script>
-</body>
-</html>`;
-
-window.onload = function() {
-  var blob = new Blob([html], {type: 'text/html'});
-  var a = document.getElementById('dl');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'index.html';
-};
 </script>
+</body>
+</html>
