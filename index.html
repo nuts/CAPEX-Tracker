@@ -209,12 +209,225 @@ function render(d){
     +'<button class="tab on" onclick="showTab(\'gantt\',this)">Timeline</button>'
     +'<button class="tab" onclick="showTab(\'budget\',this)">Budget &amp; POs</button>'
     +'<button class="tab" onclick="showTab(\'pipeline\',this)">Pipeline</button>'
+    +'<button class="tab" onclick="showTab(\'cashflow\',this)">Cash Flow</button>'
     +'</div>'
     +'<div id="gantt" class="panel on">'+gantt+'</div>'
     +'<div id="budget" class="panel">'+budget+'</div>'
     +'<div id="pipeline" class="panel">'+pipeline+'</div>'
+    +'<div id="cashflow" class="panel">'+buildCashflow()+'</div>'
     +'<div class="footer">Sources: Ryan McVeigh PO Tracking CapEX Initiatives.xlsx (Apr 7) &nbsp;·&nbsp; Brightpick Agreement FINAL.pdf &nbsp;·&nbsp; PJ Oleksak SLT announcement (Feb 27)</div>';
 }
+
+// ── CASH FLOW DATA ──────────────────────────────────────────
+// Built from PO tracker + milestone schedules
+// Dates marked (est.) are estimated from project timelines
+var CASHFLOW = [
+  // ── BRIGHTPICK ──
+  { month:'Mar 2026', project:'Brightpick', item:'Milestone 1 - 30% deposit', amount:659100, status:'paid', confirmed:true },
+  { month:'Jun 2026', project:'Brightpick', item:'Milestone 2 - 30% on delivery', amount:659100, status:'pending', confirmed:false },
+  { month:'Sep 2026', project:'Brightpick', item:'Milestone 3 - 30% system compliance', amount:659100, status:'pending', confirmed:false },
+  { month:'Nov 2026', project:'Brightpick', item:'Milestone 4 - 10% final acceptance', amount:219700, status:'pending', confirmed:false },
+  // ── MEZZANINE ──
+  { month:'Mar 2026', project:'Mezzanine', item:'M1 - 25% deposit with order', amount:71262.50, status:'paid', confirmed:true },
+  { month:'Apr 2026', project:'Mezzanine', item:'M2 - 25% prior to production (est.)', amount:71262.50, status:'pending', confirmed:false },
+  { month:'Jun 2026', project:'Mezzanine', item:'M3 - 40% prior to shipment (est.)', amount:114020, status:'pending', confirmed:false },
+  { month:'Aug 2026', project:'Mezzanine', item:'M4 - 10% net-15 after install (est.)', amount:28505, status:'pending', confirmed:false },
+  // ── VIKING MASEK ──
+  { month:'Mar 2026', project:'Viking Masek', item:'Initial deposit - PO 60025 / Inv 58353', amount:697257, status:'paid', confirmed:true },
+  { month:'Aug 2026', project:'Viking Masek', item:'Balance on delivery (est. ~Aug 20)', amount:232086, status:'pending', confirmed:false },
+  // ── ALL-FILL ──
+  { month:'Mar 2026', project:'All-Fill', item:'PO 60005 - 6 semi-auto fillers', amount:134950, status:'paid', confirmed:true },
+  // ── INFRASTRUCTURE ──
+  { month:'Mar 2026', project:'Infrastructure', item:'PO 60014 - pallet lifts', amount:22813.11, status:'paid', confirmed:true },
+  { month:'Mar 2026', project:'Infrastructure', item:'PO 60008 - platform stairs', amount:9196.40, status:'paid', confirmed:true },
+  // ── REMAINING PKG SCOPE (estimated) ──
+  { month:'Apr 2026', project:'Pkg - Remaining Scope', item:'Vendor POs - declumper, powder filler, printing (est.)', amount:215000, status:'pending', confirmed:false },
+  { month:'Jun 2026', project:'Pkg - Remaining Scope', item:'Electrical, drains, mechanical - deposit (est.)', amount:315150, status:'pending', confirmed:false },
+  { month:'Aug 2026', project:'Pkg - Remaining Scope', item:'Electrical, drains, mechanical - balance (est.)', amount:315150, status:'pending', confirmed:false },
+  { month:'Sep 2026', project:'Pkg - Remaining Scope', item:'Nitrogen generator, final installs (est.)', amount:65000, status:'pending', confirmed:false },
+];
+
+var MONTH_ORDER = ['Jan 2026','Feb 2026','Mar 2026','Apr 2026','May 2026','Jun 2026','Jul 2026','Aug 2026','Sep 2026','Oct 2026','Nov 2026','Dec 2026'];
+
+function buildCashflow() {
+  // Group by month
+  var byMonth = {};
+  CASHFLOW.forEach(function(r) {
+    if(!byMonth[r.month]) byMonth[r.month] = [];
+    byMonth[r.month].push(r);
+  });
+
+  // Monthly totals in order
+  var months = MONTH_ORDER.filter(function(m){ return byMonth[m]; });
+  var monthTotals = months.map(function(m){
+    return byMonth[m].reduce(function(s,r){ return s+r.amount; },0);
+  });
+  var totalAll = monthTotals.reduce(function(s,v){ return s+v; },0);
+
+  // Cumulative
+  var cumulative = [];
+  var running = 0;
+  monthTotals.forEach(function(v){ running+=v; cumulative.push(running); });
+
+  // Bar chart max
+  var maxBar = Math.max.apply(null, monthTotals);
+
+  // Project colors
+  var projColors = {
+    'Brightpick':'#378ADD',
+    'Mezzanine':'#1D9E75',
+    'Viking Masek':'#EF9F27',
+    'All-Fill':'#7F77DD',
+    'Infrastructure':'#CECBF6',
+    'Pkg - Remaining Scope':'#AFA9EC'
+  };
+
+  // ── Summary metrics ──
+  var paid   = CASHFLOW.filter(function(r){ return r.status==='paid'; }).reduce(function(s,r){ return s+r.amount; },0);
+  var pending= CASHFLOW.filter(function(r){ return r.status==='pending'; }).reduce(function(s,r){ return s+r.amount; },0);
+  var confirmed = CASHFLOW.filter(function(r){ return r.confirmed; }).reduce(function(s,r){ return s+r.amount; },0);
+
+  var metrics = '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem;">'
+    +[
+      {l:'Total projected spend',  v:fmt(totalAll),   s:'All projects combined'},
+      {l:'Paid to date',            v:fmt(paid),        s:'Confirmed invoices'},
+      {l:'Remaining to pay',        v:fmt(pending),     s:'Pending milestones'},
+      {l:'Confirmed vs estimated',  v:fmt(confirmed),   s:Math.round(confirmed/totalAll*100)+'% confirmed dates'},
+    ].map(function(m){
+      return '<div style="background:#f1f0eb;border-radius:8px;padding:12px 14px;">'
+        +'<div style="font-size:11px;color:#777;margin-bottom:3px;">'+m.l+'</div>'
+        +'<div style="font-size:18px;font-weight:600;">'+m.v+'</div>'
+        +'<div style="font-size:11px;color:#999;margin-top:2px;">'+m.s+'</div>'
+        +'</div>';
+    }).join('')
+    +'</div>';
+
+  // ── Bar chart ──
+  var bars = '<div style="margin-bottom:1.5rem;">'
+    +'<div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Monthly cash outflow</div>'
+    +'<div style="display:flex;align-items:flex-end;gap:6px;height:180px;padding-bottom:24px;position:relative;border-bottom:1px solid #e0e0e0;">';
+
+  months.forEach(function(m, i){
+    var h = Math.round((monthTotals[i]/maxBar)*150);
+    var isPaid = byMonth[m].every(function(r){ return r.status==='paid'; });
+    var isPartial = byMonth[m].some(function(r){ return r.status==='paid'; }) && !isPaid;
+    var barBg = isPaid ? '#378ADD' : isPartial ? '#85B7EB' : '#D3D1C7';
+    var cumPct = Math.round(cumulative[i]/totalAll*100);
+    bars += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">'
+      +'<div style="font-size:10px;color:#888;margin-bottom:2px;">'+fmt(monthTotals[i]).replace('
+  .then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  })
+  .then(render)
+  .catch(function(e){
+    document.getElementById('loading').style.display='none';
+    var err=document.getElementById('error');
+    err.style.display='block';
+    err.innerHTML='<strong>Failed to load data.json</strong><br>'+e.message+'<br><small>Check that data.json exists in the same GitHub repo folder as index.html.</small>';
+  });
+</script>
+</body>
+</html>
+,'
+  .then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  })
+  .then(render)
+  .catch(function(e){
+    document.getElementById('loading').style.display='none';
+    var err=document.getElementById('error');
+    err.style.display='block';
+    err.innerHTML='<strong>Failed to load data.json</strong><br>'+e.message+'<br><small>Check that data.json exists in the same GitHub repo folder as index.html.</small>';
+  });
+</script>
+</body>
+</html>
+).replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1,')+'</div>'
+      +'<div style="width:100%;height:'+h+'px;background:'+barBg+';border-radius:3px 3px 0 0;min-height:4px;position:relative;" title="'+m+': '+fmt(monthTotals[i])+'">'
+      +'</div>'
+      +'<div style="font-size:10px;color:#666;margin-top:4px;white-space:nowrap;">'+m.replace(' 2026','')+'</div>'
+      +'<div style="font-size:9px;color:#aaa;">'+cumPct+'%</div>'
+      +'</div>';
+  });
+  bars += '</div>';
+
+  // Legend for bars
+  bars += '<div style="display:flex;gap:16px;font-size:11px;color:#666;margin-top:8px;flex-wrap:wrap;">'
+    +'<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#378ADD;margin-right:4px;vertical-align:middle;"></span>Paid</span>'
+    +'<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#85B7EB;margin-right:4px;vertical-align:middle;"></span>Partial</span>'
+    +'<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#D3D1C7;margin-right:4px;vertical-align:middle;"></span>Pending (est.)</span>'
+    +'<span style="margin-left:8px;color:#aaa;">% = cumulative of total projected spend</span>'
+    +'</div></div>';
+
+  // ── Stacked project bar ──
+  var stackedBar = '<div style="margin-bottom:1.5rem;">'
+    +'<div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Spend by project</div>'
+    +'<div style="display:flex;height:28px;border-radius:6px;overflow:hidden;gap:1px;">';
+
+  var projTotals = {};
+  CASHFLOW.forEach(function(r){ projTotals[r.project]=(projTotals[r.project]||0)+r.amount; });
+  Object.keys(projTotals).forEach(function(p){
+    var w = (projTotals[p]/totalAll*100).toFixed(1);
+    stackedBar += '<div style="width:'+w+'%;background:'+(projColors[p]||'#ccc')+';display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;overflow:hidden;white-space:nowrap;padding:0 4px;" title="'+p+': '+fmt(projTotals[p])+' ('+w+'%)">'+w+'%</div>';
+  });
+  stackedBar += '</div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;font-size:11px;color:#666;">';
+  Object.keys(projTotals).forEach(function(p){
+    stackedBar += '<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:'+(projColors[p]||'#ccc')+';margin-right:4px;vertical-align:middle;"></span>'+p+' '+fmt(projTotals[p])+'</span>';
+  });
+  stackedBar += '</div></div>';
+
+  // ── Detail table ──
+  var tableRows = '';
+  var runningTotal = 0;
+  months.forEach(function(m){
+    var monthTotal = byMonth[m].reduce(function(s,r){ return s+r.amount; },0);
+    runningTotal += monthTotal;
+    tableRows += '<tr style="background:#f5f5f3;">'
+      +'<td colspan="4" style="padding:6px 8px;font-size:12px;font-weight:600;color:#111;border-bottom:1px solid #e0e0e0;">'+m
+      +'<span style="float:right;font-weight:400;color:#888;font-size:11px;">Month total: '+fmt(monthTotal)+'&nbsp;&nbsp;Cumulative: '+fmt(runningTotal)+'</span>'
+      +'</td></tr>';
+    byMonth[m].forEach(function(r){
+      var dot = r.confirmed
+        ? '<span style="color:#0f6e56;font-size:14px;">●</span>'
+        : '<span style="color:#aaa;font-size:14px;">○</span>';
+      var statusBadge = r.status==='paid'
+        ? '<span style="background:#e1f5ee;color:#0f6e56;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;">Paid</span>'
+        : '<span style="background:#f1f0eb;color:#888;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;">Pending</span>';
+      tableRows += '<tr style="border-bottom:0.5px solid #f0f0f0;">'
+        +'<td style="padding:4px 8px;font-size:11px;color:#666;">'+dot+'</td>'
+        +'<td style="padding:4px 8px;font-size:11px;">'
+          +'<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+(projColors[r.project]||'#ccc')+';margin-right:6px;vertical-align:middle;"></span>'
+          +'<span style="color:#111;">'+r.project+'</span>'
+        +'</td>'
+        +'<td style="padding:4px 8px;font-size:11px;color:#666;">'+r.item+'</td>'
+        +'<td style="padding:4px 8px;font-size:11px;text-align:right;font-weight:600;color:#111;white-space:nowrap;">'+fmt(r.amount)+'&nbsp;'+statusBadge+'</td>'
+        +'</tr>';
+    });
+  });
+
+  var table = '<div style="font-size:12px;font-weight:600;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">Payment schedule detail</div>'
+    +'<div style="background:#faeeda;border-radius:8px;padding:8px 12px;font-size:11px;color:#854f0b;margin-bottom:12px;">'
+    +'<strong>Note:</strong> Items marked ○ are estimated dates based on project timelines. Items marked ● have confirmed invoice dates. Remaining Pkg scope (~$910K) is split across estimated quarters pending vendor POs.'
+    +'</div>'
+    +'<table style="width:100%;border-collapse:collapse;font-size:11px;">'
+    +'<thead><tr style="border-bottom:1px solid #e0e0e0;">'
+    +'<th style="padding:4px 8px;color:#888;font-weight:600;width:24px;"></th>'
+    +'<th style="padding:4px 8px;color:#888;font-weight:600;text-align:left;">Project</th>'
+    +'<th style="padding:4px 8px;color:#888;font-weight:600;text-align:left;">Item</th>'
+    +'<th style="padding:4px 8px;color:#888;font-weight:600;text-align:right;">Amount</th>'
+    +'</tr></thead>'
+    +'<tbody>'+tableRows+'</tbody>'
+    +'<tfoot><tr style="border-top:2px solid #ddd;background:#f1f0eb;">'
+    +'<td colspan="3" style="padding:6px 8px;font-size:12px;font-weight:700;color:#111;">Total projected capital outflow</td>'
+    +'<td style="padding:6px 8px;font-size:12px;font-weight:700;color:#111;text-align:right;">'+fmt(totalAll)+'</td>'
+    +'</tr></tfoot>'
+    +'</table>';
+
+  return metrics + bars + stackedBar + table;
+}
+// ── END CASH FLOW ────────────────────────────────────────────
 
 fetch('data.json?v='+Date.now())
   .then(function(r){
