@@ -489,13 +489,26 @@
           ]
         },
         {
-          "label": "Delivery & installation (est.)",
+          "label": "FAT & Delivery",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 1.02,
+              "start": 0.4,
+              "end": 1.48,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "Installation & Commisioning ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1.48,
               "end": 3.47,
               "color": "#7F77DD"
             }
