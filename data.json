@@ -41,7 +41,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Automated Fulfillment - 30% Deposit ",
+          "description": "Automated Fulfillment 30% Deposit ",
           "date": "2026-03-17T04:00:00.000Z",
           "amount": 659100,
           "type": "paid"
@@ -49,7 +49,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Automated Fulfillment - 30% Delivery",
+          "description": "Automated Fulfillment 30% Delivery",
           "date": "2026-06-01T04:00:00.000Z",
           "amount": 659100,
           "type": "pending"
@@ -57,7 +57,7 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Automated Fulfillment - 30% SAT",
+          "description": "Automated Fulfillment 30% SAT",
           "date": "2026-09-01T04:00:00.000Z",
           "amount": 659100,
           "type": "pending"
@@ -65,13 +65,13 @@
         {
           "po": 60018,
           "vendor": "Brightpick",
-          "description": "Automated Fulfillment - 10% Final Acceptance ",
+          "description": "Automated Fulfillment 10% Final Acceptance ",
           "date": "2026-11-01T04:00:00.000Z",
           "amount": 219700,
           "type": "pending"
         },
         {
-          "po": "TBD",
+          "po": 60049,
           "vendor": "Brightpick",
           "description": "Spare Parts ",
           "date": "2026-07-01T04:00:00.000Z",
@@ -122,13 +122,6 @@
               "start": 5.67,
               "end": 6.58,
               "color": "#378ADD"
-            }
-          ],
-          "milestones": [
-            {
-              "month": 5,
-              "pct": 67,
-              "done": false
             }
           ]
         },
@@ -334,33 +327,33 @@
       },
       "pos": [
         {
-          "po": "60025 / Inv 58353",
+          "po": 60025,
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "Pre-Formed Bagger - Deposit ",
+          "description": "Pre-Formed Bagger Deposit ",
           "date": "2026-03-18T04:00:00.000Z",
           "amount": 348628.5,
           "type": "paid"
         },
         {
-          "po": "60025 / Inv 58353",
+          "po": 60025,
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "Pre-Formed Bagger - FAT",
+          "description": "Pre-Formed Bagger FAT",
           "date": "2026-07-18T04:00:00.000Z",
           "amount": 209177.1,
           "type": "pending"
         },
         {
-          "po": "60025 / Inv 58353",
+          "po": 60025,
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "Pre-Formed Bagger - Delivery",
+          "description": "Pre-Formed Bagger Delivery",
           "date": "2026-08-18T04:00:00.000Z",
           "amount": 69725.7,
           "type": "pending"
         },
         {
-          "po": "60025 / Inv 58353",
+          "po": 60025,
           "vendor": "Viking Masek Packaging Technologies LLC",
-          "description": "Pre-Formed Bagger - SAT",
+          "description": "Pre-Formed Bagger SAT",
           "date": "2026-09-18T04:00:00.000Z",
           "amount": 69725.7,
           "type": "pending"
@@ -374,33 +367,33 @@
           "type": "paid"
         },
         {
-          "po": "Q26-0304 M1",
+          "po": 60021,
           "vendor": "The Mezzanine Company",
-          "description": "Mezzanine - 25% Deposit",
+          "description": "Mezzanine 25% Deposit",
           "date": "2026-03-13T04:00:00.000Z",
           "amount": 71262.5,
           "type": "paid"
         },
         {
-          "po": "Q26-0304 M2",
+          "po": 60021,
           "vendor": "The Mezzanine Company",
-          "description": "Mezzanine - 25% Production",
+          "description": "Mezzanine 25% Production",
           "date": "2026-05-01T04:00:00.000Z",
           "amount": 71262.5,
           "type": "pending"
         },
         {
-          "po": "Q26-0304 M3",
+          "po": 60021,
           "vendor": "The Mezzanine Company",
-          "description": "Mezzanine - 40% at Shipment ",
+          "description": "Mezzanine 40% at Shipment ",
           "date": "2026-06-01T04:00:00.000Z",
           "amount": 114020,
           "type": "pending"
         },
         {
-          "po": "Q26-0304 M4",
+          "po": 60021,
           "vendor": "The Mezzanine Company",
-          "description": "Mezzanine - 10% Net-15 After Installation",
+          "description": "Mezzanine 10% Net-15 After Installation",
           "date": "2026-09-01T04:00:00.000Z",
           "amount": 28505,
           "type": "pending"
@@ -408,7 +401,7 @@
         {
           "po": 60014,
           "vendor": "Global Industrial",
-          "description": "3 Pallet Lifts ",
+          "description": "Pallet Lifts for Fillers (Qty x3)",
           "date": "2026-03-10T04:00:00.000Z",
           "amount": 22813.11,
           "type": "paid"
@@ -416,7 +409,7 @@
         {
           "po": 60008,
           "vendor": "Ajay Metal",
-          "description": "3 Platform Stairs ",
+          "description": "Platform Stairs for Fillers (Qty x3)",
           "date": "2026-03-05T05:00:00.000Z",
           "amount": 9196.4,
           "type": "paid"
@@ -899,7 +892,7 @@
   "cashflow": [
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment - 30% Deposit ",
+      "item": "Brightpick - Automated Fulfillment 30% Deposit ",
       "po": "60018",
       "amount": 659100,
       "date": "Mar 2026",
@@ -908,7 +901,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment - 30% Delivery",
+      "item": "Brightpick - Automated Fulfillment 30% Delivery",
       "po": "60018",
       "amount": 659100,
       "date": "Jun 2026",
@@ -917,7 +910,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment - 30% SAT",
+      "item": "Brightpick - Automated Fulfillment 30% SAT",
       "po": "60018",
       "amount": 659100,
       "date": "Sep 2026",
@@ -926,7 +919,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment - 10% Final Acceptance ",
+      "item": "Brightpick - Automated Fulfillment 10% Final Acceptance ",
       "po": "60018",
       "amount": 219700,
       "date": "Nov 2026",
@@ -936,7 +929,7 @@
     {
       "project": "Brightpick - Phase 1 NJ",
       "item": "Brightpick - Spare Parts ",
-      "po": "TBD",
+      "po": "60049",
       "amount": 59743.84,
       "date": "Jul 2026",
       "status": "pending",
@@ -944,8 +937,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger - Deposit ",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger Deposit ",
+      "po": "60025",
       "amount": 348628.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -953,8 +946,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger - FAT",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger FAT",
+      "po": "60025",
       "amount": 209177.1,
       "date": "Jul 2026",
       "status": "pending",
@@ -962,8 +955,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger - Delivery",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger Delivery",
+      "po": "60025",
       "amount": 69725.7,
       "date": "Aug 2026",
       "status": "pending",
@@ -971,8 +964,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger - SAT",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger SAT",
+      "po": "60025",
       "amount": 69725.7,
       "date": "Sep 2026",
       "status": "pending",
@@ -989,8 +982,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine - 25% Deposit",
-      "po": "Q26-0304 M1",
+      "item": "The Mezzanine Company - Mezzanine 25% Deposit",
+      "po": "60021",
       "amount": 71262.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -998,8 +991,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine - 25% Production",
-      "po": "Q26-0304 M2",
+      "item": "The Mezzanine Company - Mezzanine 25% Production",
+      "po": "60021",
       "amount": 71262.5,
       "date": "May 2026",
       "status": "pending",
@@ -1007,8 +1000,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine - 40% at Shipment ",
-      "po": "Q26-0304 M3",
+      "item": "The Mezzanine Company - Mezzanine 40% at Shipment ",
+      "po": "60021",
       "amount": 114020,
       "date": "Jun 2026",
       "status": "pending",
@@ -1016,8 +1009,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine - 10% Net-15 After Installation",
-      "po": "Q26-0304 M4",
+      "item": "The Mezzanine Company - Mezzanine 10% Net-15 After Installation",
+      "po": "60021",
       "amount": 28505,
       "date": "Sep 2026",
       "status": "pending",
@@ -1025,7 +1018,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Global Industrial - 3 Pallet Lifts ",
+      "item": "Global Industrial - Pallet Lifts for Fillers (Qty x3)",
       "po": "60014",
       "amount": 22813.11,
       "date": "Mar 2026",
@@ -1034,7 +1027,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Ajay Metal - 3 Platform Stairs ",
+      "item": "Ajay Metal - Platform Stairs for Fillers (Qty x3)",
       "po": "60008",
       "amount": 9196.4,
       "date": "Mar 2026",
