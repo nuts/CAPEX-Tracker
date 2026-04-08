@@ -96,7 +96,7 @@
         {
           "label": "Robot & racking lead time (28 wks)",
           "is_subheader": false,
-          "is_critical_path": true,
+          "is_critical_path": false,
           "risk_level": "medium",
           "bars": [
             {
