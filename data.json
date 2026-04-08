@@ -785,7 +785,7 @@
             {
               "start": 1.31,
               "end": 2.3,
-              "color": "#378ADD"
+              "color": "#0097A7"
             }
           ],
           "milestones": [
@@ -805,7 +805,7 @@
             {
               "start": 1.31,
               "end": 1.77,
-              "color": "#F4B8B4"
+              "color": "#0097A7"
             }
           ]
         },
@@ -831,7 +831,7 @@
             {
               "start": 2.3,
               "end": 8.19,
-              "color": "#C0392B"
+              "color": "#4DD0E1"
             }
           ],
           "milestones": [
