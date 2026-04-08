@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CapEx Tracker</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f9f9f7;color:#111;padding:1.5rem 2rem;max-width:1100px;margin:0 auto;font-size:14px}
+#loading{padding:3rem;text-align:center;color:#888}
+#error{padding:2rem;color:#c00;background:#fff5f5;border-radius:8px;border:1px solid #fcc;display:none}
+h1{font-size:20px;font-weight:600;margin-bottom:3px}
+.sub{font-size:13px;color:#777;margin-bottom:1.25rem}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem}
+@media(max-width:600px){.metrics{grid-template-columns:1fr 1fr}}
+.metric{background:#f1f0eb;border-radius:8px;padding:12px 14px}
+.ml{font-size:11px;color:#777;margin-bottom:3px}
+.mv{font-size:19px;font-weight:600}
+.ms{font-size:11px;color:#999;margin-top:2px}
+.tabs{display:flex;border-bottom:1.5px solid #e0e0e0;margin-bottom:1rem}
+.tab{font-size:13px;color:#999;background:none;border:none;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;padding:7px 16px;cursor:pointer}
+.tab.on{color:#111;font-weight:600;border-bottom-color:#111}
+.panel{display:none}.panel.on{display:block}
+.badge{font-size:11px;padding:2px 8px;border-radius:5px;font-weight:600;display:inline-block}
+.bpaid{background:#e1f5ee;color:#0f6e56}
+.bpending{background:#e6f1fb;color:#185fa5}
+.bcontract{background:#eeedfe;color:#3c3489}
+.bactive{background:#e1f5ee;color:#0f6e56}
+.alert{background:#faeeda;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#854f0b}
+.alert ul{margin:4px 0 0 16px}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:1rem 1.1rem;margin-bottom:12px}
+.card-hdr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:2px}
+.card-title{font-size:13px;font-weight:600}
+.card-sub{font-size:11px;color:#888;margin-bottom:10px}
+.brow{margin-bottom:7px}
+.brow-lbl{display:flex;justify-content:space-between;font-size:11px;color:#888;margin-bottom:3px}
+.brow-lbl b{font-weight:600;color:#111}
+.bg{background:#f1f0eb;border-radius:4px;height:7px;overflow:hidden}
+.bf{height:100%;border-radius:4px}
+.divider{border-top:1px solid #f0f0f0;margin:10px 0;padding-top:10px}
+.slbl{font-size:11px;font-weight:600;color:#888;margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{text-align:left;padding:4px 6px;color:#888;font-weight:600;border-bottom:1px solid #e8e8e8;white-space:nowrap}
+td{padding:3px 6px;border-bottom:0.5px solid #f5f5f5;color:#666}
+td.n{color:#111;white-space:nowrap}
+td.r{text-align:right;font-weight:600;color:#111;white-space:nowrap}
+tr.tot td{font-weight:700;color:#111;border-top:1px solid #ddd;border-bottom:none;font-size:12px}
+.note{font-size:11px;color:#aaa;font-style:italic;margin-top:8px}
+.sbox{background:#f1f0eb;border-radius:8px;padding:12px 14px;margin-top:12px}
+.srow{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:0.5px solid #ddd}
+.srow:last-child{border-bottom:none}
+.sl{color:#888}.sv{font-weight:600;color:#111}
+.pitem{background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.pname{font-size:13px}
+.pr{display:flex;gap:12px;align-items:center}
+.pa{font-size:13px;font-weight:600}
+.ps{font-size:11px;color:#888}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:#666;margin-bottom:10px;align-items:center}
+.sw{width:11px;height:11px;border-radius:2px;display:inline-block;flex-shrink:0}
+.gwrap{overflow-x:auto}
+table.g{min-width:640px}
+table.g th{background:#fff;text-align:center;font-size:11px}
+table.g th.lc{text-align:left;min-width:190px;padding-left:8px}
+table.g td{padding:1px 2px;border-bottom:0.5px solid #f0f0f0}
+table.g td.lbl{padding-left:20px;font-size:11px;color:#666;white-space:nowrap}
+table.g td.lbl.sh{padding-left:8px;font-size:11.5px;font-weight:600;color:#111;background:#f5f5f3}
+table.g tr.ph td{background:#2c2c2a;color:#fff;font-size:12px;font-weight:600;padding:8px 8px 5px}
+.bc{position:relative;height:20px}
+.bar{position:absolute;top:3px;height:14px;border-radius:3px}
+.ms2{position:absolute;top:2px;font-size:14px;transform:translateX(-50%);line-height:1}
+.footer{font-size:11px;color:#bbb;margin-top:1.5rem;padding-top:8px;border-top:1px solid #e8e8e8}
+</style>
+</head>
+<body>
+<div id="loading">Loading tracker data…</div>
+<div id="error"></div>
+<div id="app" style="display:none"></div>
+
+<script>
+var MONTHS=['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
+var N=MONTHS.length;
+
+function fmt(n){return n==null?'—':'$'+Math.round(n).toLocaleString();}
+function pct(a,b){return Math.min(100,Math.round(a/b*100));}
+function bdg(t){
+  var m={active:['bactive','Active'],paid:['bpaid','Paid'],pending:['bpending','Pending'],contract:['bcontract','Contracted'],complete:['bpaid','Complete'],'on-hold':['bpending','On Hold']};
+  var s=m[t]||['bpending',t];
+  return '<span class="badge '+s[0]+'">'+s[1]+'</span>';
+}
+
+function showTab(id,btn){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+
+function render(d){
+  document.getElementById('loading').style.display='none';
+  var app=document.getElementById('app');
+  app.style.display='block';
+
+  var totApproved=d.projects.reduce(function(s,p){return s+p.approved_budget;},0);
+  var totPaid=d.projects.reduce(function(s,p){return s+p.paid_to_date;},0);
+  var totSavings=d.projects.reduce(function(s,p){return s+p.annualized_savings;},0);
+  var bp=d.projects.find(function(p){return p.id==='brightpick';})||d.projects[0];
+
+  // METRICS
+  var metrics='<div class="metrics">'
+    +'<div class="metric"><div class="ml">Total approved budget</div><div class="mv">'+fmt(totApproved)+'</div><div class="ms">Across '+d.projects.length+' projects</div></div>'
+    +'<div class="metric"><div class="ml">Brightpick contract value</div><div class="mv">'+fmt(bp.contract_total)+'</div><div class="ms">'+fmt(bp.approved_budget-bp.contract_total)+' under approved</div></div>'
+    +'<div class="metric"><div class="ml">Total paid to date</div><div class="mv">'+fmt(totPaid)+'</div><div class="ms">'+pct(totPaid,totApproved)+'% of approved budget</div></div>'
+    +'<div class="metric"><div class="ml">Combined annualized savings</div><div class="mv">'+fmt(totSavings)+'</div><div class="ms">Across all active projects</div></div>'
+    +'</div>';
+
+  // GANTT
+  var gRows='';
+  d.projects.forEach(function(proj){
+    gRows+='<tr class="ph"><td colspan="'+(N+1)+'">'+proj.name+' &nbsp;'+bdg(proj.status)+'&nbsp;<span style="font-size:11px;font-weight:400;opacity:.7">Approved '+fmt(proj.approved_budget)+' · Contract '+fmt(proj.contract_total)+' · Savings '+fmt(proj.annualized_savings)+'/yr</span></td></tr>';
+    (proj.gantt||[]).forEach(function(task){
+      var isSub=task.is_subheader;
+      var bg=isSub?'background:#f5f5f3;':'';
+      gRows+='<tr style="'+bg+'">';
+      gRows+='<td class="lbl'+(isSub?' sh':'')+'" style="'+bg+'">'+task.label+'</td>';
+      gRows+='<td colspan="'+N+'" style="padding:0;'+bg+'">';
+      gRows+='<div style="position:relative;height:22px;width:100%;">';
+      (task.bars||[]).forEach(function(b){
+        var l=(b.start/N)*100;
+        var w=((b.end-b.start)/N)*100;
+        gRows+='<div style="position:absolute;top:4px;height:14px;border-radius:3px;'
+          +'left:'+l.toFixed(2)+'%;'
+          +'width:'+w.toFixed(2)+'%;'
+          +'background:'+b.color+';'
+          +'opacity:0.9;"></div>';
+      });
+      (task.milestones||[]).forEach(function(ms){
+        var l=((ms.month+(ms.pct/100))/N)*100;
+        gRows+='<div style="position:absolute;top:3px;'
+          +'left:'+l.toFixed(2)+'%;'
+          +'transform:translateX(-50%);'
+          +'font-size:15px;line-height:1;'
+          +'color:'+(ms.done?'#639922':'#EF9F27')+';">◆</div>';
+      });
+      gRows+='</div></td></tr>';
+    });
+  });
+
+  var gantt='<div class="legend">'
+    +'<span><span class="sw" style="background:#378ADD"></span>Brightpick</span>'
+    +'<span><span class="sw" style="background:#1D9E75"></span>Mezzanine</span>'
+    +'<span><span class="sw" style="background:#EF9F27"></span>Viking</span>'
+    +'<span><span class="sw" style="background:#7F77DD"></span>All-Fill</span>'
+    +'<span><span style="color:#639922;font-size:15px">◆</span> Complete</span>'
+    +'<span><span style="color:#EF9F27;font-size:15px">◆</span> Pending</span>'
+    +'</div>'
+    +'<div class="gwrap"><table class="g"><thead><tr><th class="lc">Task</th>'
+    +MONTHS.map(function(m){return '<th>'+m+'</th>';}).join('')
+    +'</tr></thead><tbody>'+gRows+'</tbody></table></div>';
+
+  // BUDGET
+  var totContracted=d.projects.reduce(function(s,p){return s+p.contract_total;},0);
+  var budget='';
+  if(d.open_items&&d.open_items.length){
+    budget+='<div class="alert"><strong>Open items:</strong><ul>'+d.open_items.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul></div>';
+  }
+  d.projects.forEach(function(proj){
+    var poRows=proj.pos.map(function(po){
+      return '<tr><td class="n">'+po.po+'</td><td>'+po.vendor+'</td><td>'+po.description+'</td><td style="white-space:nowrap">'+po.date+'</td><td class="r">'+fmt(po.amount)+'</td><td>'+bdg(po.type)+'</td></tr>';
+    }).join('');
+    budget+='<div class="card">'
+      +'<div class="card-hdr"><span class="card-title">'+proj.name+'</span>'+bdg(proj.status)+'</div>'
+      +'<div class="card-sub">Approved '+fmt(proj.approved_budget)+' · Contract '+fmt(proj.contract_total)+' · '+fmt(proj.annualized_savings)+'/yr savings</div>'
+      +[
+        {l:'Approved budget',v:proj.approved_budget,w:100,c:'#e0e0e0'},
+        {l:'Contracted',v:proj.contract_total,w:pct(proj.contract_total,proj.approved_budget),c:proj.color},
+        {l:'Paid to date',v:proj.paid_to_date,w:pct(proj.paid_to_date,proj.approved_budget),c:proj.color_light},
+        {l:'Remaining',v:proj.approved_budget-proj.paid_to_date,w:pct(proj.approved_budget-proj.paid_to_date,proj.approved_budget),c:'#d3d3d3'},
+      ].map(function(r){
+        return '<div class="brow"><div class="brow-lbl"><span>'+r.l+'</span><b>'+fmt(r.v)+'</b></div><div class="bg"><div class="bf" style="width:'+r.w+'%;background:'+r.c+'"></div></div></div>';
+      }).join('')
+      +'<div class="divider"><div class="slbl">PO / payment detail</div>'
+      +'<table><thead><tr><th>PO #</th><th>Vendor</th><th>Description</th><th>Date</th><th style="text-align:right">Amount</th><th>Status</th></tr></thead>'
+      +'<tbody>'+poRows+'<tr class="tot"><td colspan="4">Paid to date total</td><td class="r">'+fmt(proj.paid_to_date)+'</td><td></td></tr></tbody></table>'
+      +(proj.note?'<div class="note">'+proj.note+'</div>':'')
+      +'</div></div>';
+  });
+  budget+='<div class="sbox"><div class="slbl" style="margin-bottom:8px">Combined summary</div>'
+    +[['Total approved budget',fmt(totApproved)],['Total contracted',fmt(totContracted)],['Total paid to date',fmt(totPaid)],['Remaining uncontracted',fmt(totApproved-totContracted)]]
+    .map(function(r){return '<div class="srow"><span class="sl">'+r[0]+'</span><span class="sv">'+r[1]+'</span></div>';}).join('')
+    +'</div>';
+
+  // PIPELINE
+  var totPipe=d.pipeline.reduce(function(s,p){return s+p.investment;},0);
+  var totPipeSave=d.pipeline.filter(function(p){return p.savings;}).reduce(function(s,p){return s+p.savings;},0);
+  var pipeline='<p style="font-size:12px;color:#888;margin-bottom:12px">Next wave — pending board approval.</p>'
+    +d.pipeline.map(function(p){
+      return '<div class="pitem"><span class="pname">'+p.name+'</span>'
+        +'<div class="pr"><span class="pa">'+fmt(p.investment)+'</span>'
+        +(p.savings?'<span class="ps">'+fmt(p.savings)+'/yr</span>':'')
+        +bdg('pending')+'</div></div>';
+    }).join('')
+    +'<div class="sbox"><div class="srow"><span class="sl">Total pipeline</span><span class="sv">'+fmt(totPipe)+'</span></div>'
+    +'<div class="srow"><span class="sl">Combined savings (ex. infra)</span><span class="sv">'+fmt(totPipeSave)+'/yr</span></div></div>';
+
+  app.innerHTML='<h1>'+d.meta.title+'</h1>'
+    +'<div class="sub">'+d.meta.facility+' &nbsp;·&nbsp; '+d.meta.fiscal_year+' &nbsp;·&nbsp; Updated '+d.meta.last_updated+' by '+d.meta.last_updated_by+'</div>'
+    +metrics
+    +'<div class="tabs">'
+    +'<button class="tab on" onclick="showTab(\'gantt\',this)">Timeline</button>'
+    +'<button class="tab" onclick="showTab(\'budget\',this)">Budget &amp; POs</button>'
+    +'<button class="tab" onclick="showTab(\'pipeline\',this)">Pipeline</button>'
+    +'</div>'
+    +'<div id="gantt" class="panel on">'+gantt+'</div>'
+    +'<div id="budget" class="panel">'+budget+'</div>'
+    +'<div id="pipeline" class="panel">'+pipeline+'</div>'
+}
+
+// Load data.json
+fetch('data.json?v='+Date.now())
+  .then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  })
+  .then(render)
+  .catch(function(e){
+    document.getElementById('loading').style.display='none';
+    var err=document.getElementById('error');
+    err.style.display='block';
+    err.innerHTML='<strong>Failed to load data.json</strong><br>'+e.message+'<br><small>Check that data.json exists in the same GitHub repo folder as index.html.</small>';
+  });
+</script>
+</body>
+</html>
