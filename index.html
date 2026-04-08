@@ -151,9 +151,14 @@ function render(d){
   app.style.display="block";
   var ta=d.projects.reduce(function(s,p){return s+p.approved_budget;},0);
   var tp=d.projects.reduce(function(s,p){return s+p.paid_to_date;},0);
-  var ts=d.projects.reduce(function(s,p){return s+p.annualized_savings;},0);
-  var bp=d.projects.find(function(p){return p.id==="brightpick-phase-1-nj";})||d.projects[0];
-  var metrics='<div class="metrics">'+[{l:"Total approved budget",v:fmt(ta),s:"Across "+d.projects.length+" projects"},{l:"Brightpick contract value",v:fmt(bp.contract_total),s:fmt(bp.approved_budget-bp.contract_total)+" under approved"},{l:"Total paid to date",v:fmt(tp),s:pct(tp,ta)+"% of approved budget"},{l:"Combined annualized savings",v:fmt(ts),s:"Across all active projects"}].map(function(m){return '<div class="metric"><div class="ml">'+m.l+'</div><div class="mv">'+m.v+'</div><div class="ms">'+m.s+'</div></div>';}).join('')+'</div>';
+  var tcf=d.cashflow?d.cashflow.reduce(function(s,r){return s+r.amount;},0):0;
+  var trem=d.cashflow?d.cashflow.filter(function(r){return r.status==="pending";}).reduce(function(s,r){return s+r.amount;},0):0;
+  var metrics='<div class="metrics">'+[
+    {l:"Total approved budget",v:fmt(ta),s:"Across "+d.projects.length+" projects"},
+    {l:"Total projected spend",v:fmt(tcf),s:"All committed POs"},
+    {l:"Paid to date",v:fmt(tp),s:pct(tp,ta)+"% of approved budget"},
+    {l:"Remaining to pay",v:fmt(trem),s:"Pending milestones & POs"}
+  ].map(function(m){return '<div class="metric"><div class="ml">'+m.l+'</div><div class="mv">'+m.v+'</div><div class="ms">'+m.s+'</div></div>';}).join('')+'</div>';
   var gRows="";
   d.projects.forEach(function(proj){
     gRows+='<tr class="ph"><td colspan="'+(N+1)+'">'+proj.name+'&nbsp;'+bdg(proj.status)+'&nbsp;<span style="font-size:11px;font-weight:400;opacity:.7">Approved '+fmt(proj.approved_budget)+' - Contract '+fmt(proj.contract_total)+' - Savings '+fmt(proj.annualized_savings)+'/yr</span></td></tr>';
