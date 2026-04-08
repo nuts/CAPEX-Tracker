@@ -458,7 +458,7 @@
           ]
         },
         {
-          "label": "-- -VikingMasek Preformed Bagger (Model 8S-285)",
+          "label": "---VikingMasek Preformed Bagger (Model 8S-285)",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
@@ -562,7 +562,7 @@
           ]
         },
         {
-          "label": "FAT & Delivery",
+          "label": "Filler FAT & Delivery",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
@@ -575,13 +575,39 @@
           ]
         },
         {
+          "label": "Pallet Lift & Platform PO",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 0.14,
+              "end": 0.14,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "Pallet Lift & Platofrm Delivery",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 0.14,
+              "end": 1.74,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
           "label": "Installation & Commissioning ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 1.48,
+              "start": 1.74,
               "end": 3.47,
               "color": "#7F77DD"
             }
@@ -620,36 +646,22 @@
           ]
         },
         {
-          "label": "-- Infrastructure: stairs + pallet lifts - $32K",
-          "is_subheader": true,
+          "label": "",
+          "is_subheader": false,
           "is_critical_path": false,
           "risk_level": ""
         },
         {
-          "label": "POs issued Mar 5-10",
+          "label": "",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "milestones": [
-            {
-              "month": 0,
-              "pct": 30,
-              "done": true
-            }
-          ]
+          "risk_level": ""
         },
         {
-          "label": "Delivery & install",
+          "label": "",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 0.46,
-              "end": 1.97,
-              "color": "#CECBF6"
-            }
-          ]
+          "risk_level": ""
         }
       ],
       "capital_items": [
