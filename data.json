@@ -347,7 +347,7 @@
           "risk_level": ""
         },
         {
-          "label": "PO issued Mar 13 - 25% deposit paid",
+          "label": "PO Issued (March 13th) ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
@@ -360,36 +360,95 @@
           ]
         },
         {
-          "label": "Design, fabrication & delivery",
+          "label": "Design & Fire Protection",
           "is_subheader": false,
           "is_critical_path": true,
           "risk_level": "high",
           "bars": [
             {
               "start": 0.4,
-              "end": 3.47,
+              "end": 1.77,
               "color": "#5DCAA5"
             }
           ]
         },
         {
-          "label": "Installation & commissioning",
+          "label": "PE Drawings",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "bars": [
+            {
+              "start": 1.77,
+              "end": 2.23,
+              "color": "#5DCAA5"
+            }
+          ]
+        },
+        {
+          "label": "Permit Submittal & Approval",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "bars": [
+            {
+              "start": 2.23,
+              "end": 3.15,
+              "color": "#5DCAA5"
+            }
+          ]
+        },
+        {
+          "label": "Steel Fabrication",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "bars": [
             {
-              "start": 3.47,
-              "end": 4.78,
+              "start": 3.15,
+              "end": 5.44,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Delivery ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.44,
+              "end": 5.67,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Installation On-Site",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.67,
+              "end": 6.13,
               "color": "#1D9E75"
             }
           ]
         },
         {
-          "label": "Complete (Brightpick site-prep dependency)",
+          "label": "Complete (Brightpick Requested Date)",
           "is_subheader": false,
           "is_critical_path": true,
           "risk_level": "high",
+          "bars": [
+            {
+              "start": 5.44,
+              "end": 5.44,
+              "color": "#378ADD"
+            }
+          ],
           "milestones": [
             {
               "month": 4,
@@ -464,7 +523,7 @@
           ]
         },
         {
-          "label": "Go-live",
+          "label": "Full Production",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
