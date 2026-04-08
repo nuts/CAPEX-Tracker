@@ -278,22 +278,22 @@
       ],
       "capital_items": [
         {
-          "item": "Brightpick robots, hardware & contract",
+          "item": "Brightpick (Full System)",
           "amount": 2200000,
           "category": "Capital"
         },
         {
-          "item": "Conveyance (induction & return)",
+          "item": "Conveyance (Induction & Return)",
           "amount": 405000,
           "category": "Capital"
         },
         {
-          "item": "10% contingency",
-          "amount": 263500,
+          "item": "Brightpick Contingency",
+          "amount": 30000,
           "category": "Contingency"
         },
         {
-          "item": "Project expenses (integration, commissioning, training)",
+          "item": "Project Expenses (Demo, Freight, Tariff) ",
           "amount": 189200,
           "category": "Expense"
         }
@@ -771,94 +771,109 @@
       ],
       "capital_items": [
         {
-          "item": "Complete preformed bagging line - Viking Masek 8S-285",
+          "item": "VikingMasek 8S-285 Pre-Formed Bagger Line",
           "amount": 465000,
           "category": "Capital"
         },
         {
-          "item": "New mezzanine - structure",
+          "item": "New Mezzanine - Expanded Structure",
           "amount": 450000,
           "category": "Capital"
         },
         {
-          "item": "Electrical installation (new & relocating baggers)",
+          "item": "Electrical Installation (Baggers, Fillers, etc.)",
           "amount": 355000,
           "category": "Capital"
         },
         {
-          "item": "Mechanical (plumbing, ducting, HVAC)",
+          "item": "Mechanical (Plumbing, HVAC, Rigging)",
           "amount": 192000,
           "category": "Capital"
         },
         {
-          "item": "New mezzanine - fire protection",
+          "item": "New Mezzanine - Fire Protection",
           "amount": 150000,
           "category": "Capital"
         },
         {
-          "item": "VF100e semi-automated fillers x6 (All-Fill)",
+          "item": "All-Fill VF100e Semi-Automated Fillers (Qty x6)",
           "amount": 122000,
           "category": "Capital"
         },
         {
-          "item": "Drains for roasting (80LF + grease trap)",
+          "item": "Drains for Roasting (80LF + Grease Trap)",
           "amount": 83300,
           "category": "Capital"
         },
         {
-          "item": "Direct pouch printing - PouchMark FLOW XT500 x2",
+          "item": "Direct Pouch Printing (PouchMark FLOW XT500 Qty x2)",
           "amount": 80000,
           "category": "Capital"
         },
         {
-          "item": "Dried fruit declumper (Whirlwind Engineering)",
+          "item": "Dried Fruit Declumper (Whirlwind Engineering)",
           "amount": 70000,
           "category": "Capital"
         },
         {
-          "item": "Powder filler - TBD (Viking or All-Fill)",
+          "item": "Powder Filler - Brand TBD (Viking or All Fill)",
           "amount": 65000,
           "category": "Capital"
         },
         {
-          "item": "Nitrogen generator - N2GEN TS (backflush)",
+          "item": "Nitrogen Generator for Backflush (N2GEN TS)",
           "amount": 65000,
           "category": "Capital"
         },
         {
-          "item": "New mezzanine - lighting",
+          "item": "New Mezzanine - Lighting",
           "amount": 45000,
           "category": "Capital"
         },
         {
-          "item": "Additional stainless steel tables & conveyors",
+          "item": "Additional Stainless Steel Tables & Conveyors For Lanes",
           "amount": 30000,
           "category": "Capital"
         },
         {
-          "item": "New custom tray line on mezz",
+          "item": "New Custom Tray Line on Mezzanine ",
           "amount": 30000,
           "category": "Capital"
         },
         {
-          "item": "Pallet lift tables x3",
+          "item": "Pallet Lifts for Fillers (Qty x3)",
           "amount": 25000,
           "category": "Capital"
         },
         {
-          "item": "Stainless steel work platforms x3",
+          "item": "Platform Stairs for Fillers (Qty x3)",
           "amount": 10000,
           "category": "Capital"
         },
         {
           "item": "20% contingency (base case)",
-          "amount": 728712,
+          "amount": 607260,
           "category": "Contingency"
         },
         {
           "item": "Project expenses (engineering, commissioning)",
           "amount": 27500,
           "category": "Expense"
+        },
+        {
+          "item": "General Construction (Walls, Floor, Curbs, Bollards, Doors, etc)",
+          "amount": 689000,
+          "category": "Capital"
+        },
+        {
+          "item": "Rigging & Storage Racking",
+          "amount": 50000,
+          "category": "Capital"
+        },
+        {
+          "item": "Fire Protection (Coverage Changes, Ansell Not Included)",
+          "amount": 60000,
+          "category": "Capital"
         }
       ]
     }
@@ -866,7 +881,7 @@
   "pipeline": [
     {
       "name": "Automated Chocolate Panning (Dumoulin or Similar) ",
-      "investment": 1800000,
+      "investment": 3000000,
       "savings": 1200000,
       "estimated_approval_date": "Q3 2026"
     },
