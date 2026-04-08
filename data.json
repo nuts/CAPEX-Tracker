@@ -79,7 +79,119 @@
           "type": "pending"
         }
       ],
-      "gantt": [],
+      "gantt": [
+        {
+          "label": "Contract signed + 30% deposit (~$659K paid)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 30,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Robot & racking lead time (28 wks)",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "medium",
+          "bars": [
+            {
+              "start": -0.98,
+              "end": 5.44,
+              "color": "#B5D4F4"
+            }
+          ]
+        },
+        {
+          "label": "Equipment delivery",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.61,
+              "end": 3.97,
+              "color": "#378ADD"
+            }
+          ],
+          "milestones": [
+            {
+              "month": 3,
+              "pct": 97,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "Site prep (mezz must be complete first)",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "bars": [
+            {
+              "start": 3.02,
+              "end": 4.46,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance installation",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 4.29,
+              "end": 5.21,
+              "color": "#378ADD"
+            }
+          ]
+        },
+        {
+          "label": "Conveyance testing & go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.21,
+              "end": 5.67,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Testing & SAT",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "medium",
+          "bars": [
+            {
+              "start": 5.44,
+              "end": 6.81,
+              "color": "#85B7EB"
+            }
+          ]
+        },
+        {
+          "label": "Full go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 8,
+              "pct": 19,
+              "done": false
+            }
+          ]
+        }
+      ],
       "capital_items": [
         {
           "item": "Brightpick robots, hardware & contract",
@@ -227,7 +339,233 @@
           "type": "paid"
         }
       ],
-      "gantt": [],
+      "gantt": [
+        {
+          "label": "-- Mezzanine - The Mezzanine Company - $285,050",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "PO issued Mar 13 - 25% deposit paid",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 40,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Design, fabrication & delivery",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "bars": [
+            {
+              "start": 0.4,
+              "end": 3.47,
+              "color": "#5DCAA5"
+            }
+          ]
+        },
+        {
+          "label": "Installation & commissioning",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.47,
+              "end": 4.78,
+              "color": "#1D9E75"
+            }
+          ]
+        },
+        {
+          "label": "Complete (Brightpick site-prep dependency)",
+          "is_subheader": false,
+          "is_critical_path": true,
+          "risk_level": "high",
+          "milestones": [
+            {
+              "month": 4,
+              "pct": 78,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "-- Viking Masek bagging line (8S-285) - $465K approved",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Initial deposit invoice Mar 18",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 56,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Manufacturing (20-wk lead from Apr 2)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "medium",
+          "bars": [
+            {
+              "start": 1.05,
+              "end": 5.63,
+              "color": "#FAC775"
+            }
+          ]
+        },
+        {
+          "label": "Delivery (~Aug 20)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 5,
+              "pct": 63,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "Installation & commissioning",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 5.63,
+              "end": 6.55,
+              "color": "#EF9F27"
+            }
+          ]
+        },
+        {
+          "label": "Go-live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 6,
+              "pct": 55,
+              "done": false
+            }
+          ]
+        },
+        {
+          "label": "-- All-Fill semi-auto fillers x6 - $122K",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "PO issued Mar 13",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 40,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Delivery & installation (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1.02,
+              "end": 3.47,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "-- Remaining scope (declumper, powder filler, electrical, drains, printing, N2)",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "Vendor selection & POs (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "medium",
+          "bars": [
+            {
+              "start": 1.02,
+              "end": 2.46,
+              "color": "#AFA9EC"
+            }
+          ]
+        },
+        {
+          "label": "Delivery & installation (est.)",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.02,
+              "end": 6.55,
+              "color": "#7F77DD"
+            }
+          ]
+        },
+        {
+          "label": "-- Infrastructure: stairs + pallet lifts - $32K",
+          "is_subheader": true,
+          "is_critical_path": false,
+          "risk_level": ""
+        },
+        {
+          "label": "POs issued Mar 5-10",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 0,
+              "pct": 30,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Delivery & install",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 0.46,
+              "end": 1.97,
+              "color": "#CECBF6"
+            }
+          ]
+        }
+      ],
       "capital_items": [
         {
           "item": "Complete preformed bagging line - Viking Masek 8S-285",
