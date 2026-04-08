@@ -16,7 +16,7 @@
       "name": "Brightpick - Phase 1 NJ",
       "status": "active",
       "approved_budget": 2700000,
-      "contract_total": 2256743.84,
+      "contract_total": 2856743.84,
       "paid_to_date": 659100,
       "annualized_savings": 770000,
       "color": "#378ADD",
@@ -76,6 +76,22 @@
           "description": "Spare Parts ",
           "date": "2026-07-01T04:00:00.000Z",
           "amount": 59743.84,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Conveynace",
+          "description": "Conveynace",
+          "date": "2026-04-20T04:00:00.000Z",
+          "amount": 300000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Conveynace",
+          "description": "Conveynace",
+          "date": "2026-08-01T04:00:00.000Z",
+          "amount": 300000,
           "type": "pending"
         }
       ],
@@ -304,7 +320,7 @@
       "name": "Packaging Modernization",
       "status": "active",
       "approved_budget": 3700000,
-      "contract_total": 1149266.51,
+      "contract_total": 3524266.51,
       "paid_to_date": 935479,
       "annualized_savings": 2200000,
       "color": "#1D9E75",
@@ -413,6 +429,78 @@
           "date": "2026-03-05T05:00:00.000Z",
           "amount": 9196.4,
           "type": "paid"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Pouchmark",
+          "description": "Direct to Pouch Printer",
+          "date": "2026-05-01T04:00:00.000Z",
+          "amount": 40000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Pouchmark",
+          "description": "Direct to Pouch Printer",
+          "date": "2026-08-01T04:00:00.000Z",
+          "amount": 40000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "All-Fill",
+          "description": "Powder Filler",
+          "date": "2026-05-01T04:00:00.000Z",
+          "amount": 65000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Whirlwind Engineering",
+          "description": "Dried Fruit Declumper",
+          "date": "2026-05-01T04:00:00.000Z",
+          "amount": 70000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "N2GEN",
+          "description": "Nitrogen Generator for Backflush",
+          "date": "2026-05-01T04:00:00.000Z",
+          "amount": 50000,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Cibco",
+          "description": "General Contractor 25% Down",
+          "date": "2026-05-01T04:00:00.000Z",
+          "amount": 527500,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Cibco",
+          "description": "General Contractor 25% Progress ",
+          "date": "2026-07-01T04:00:00.000Z",
+          "amount": 527500,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Cibco",
+          "description": "General Contractor 25% Progress ",
+          "date": "2026-09-01T04:00:00.000Z",
+          "amount": 527500,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Cibco",
+          "description": "General Contractor 25% Progress ",
+          "date": "2026-12-01T05:00:00.000Z",
+          "amount": 527500,
+          "type": "pending"
         }
       ],
       "gantt": [
@@ -1019,6 +1107,24 @@
       "confirmed": false
     },
     {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Conveynace - Conveynace",
+      "po": "TBD",
+      "amount": 300000,
+      "date": "Apr 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Brightpick - Phase 1 NJ",
+      "item": "Conveynace - Conveynace",
+      "po": "TBD",
+      "amount": 300000,
+      "date": "Aug 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
       "project": "Packaging Modernization",
       "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger Deposit ",
       "po": "60025",
@@ -1116,6 +1222,87 @@
       "date": "Mar 2026",
       "status": "paid",
       "confirmed": true
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Pouchmark - Direct to Pouch Printer",
+      "po": "TBD",
+      "amount": 40000,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Pouchmark - Direct to Pouch Printer",
+      "po": "TBD",
+      "amount": 40000,
+      "date": "Aug 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "All-Fill - Powder Filler",
+      "po": "TBD",
+      "amount": 65000,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Whirlwind Engineering - Dried Fruit Declumper",
+      "po": "TBD",
+      "amount": 70000,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "N2GEN - Nitrogen Generator for Backflush",
+      "po": "TBD",
+      "amount": 50000,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Cibco - General Contractor 25% Down",
+      "po": "TBD",
+      "amount": 527500,
+      "date": "May 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Cibco - General Contractor 25% Progress ",
+      "po": "TBD",
+      "amount": 527500,
+      "date": "Jul 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Cibco - General Contractor 25% Progress ",
+      "po": "TBD",
+      "amount": 527500,
+      "date": "Sep 2026",
+      "status": "pending",
+      "confirmed": false
+    },
+    {
+      "project": "Packaging Modernization",
+      "item": "Cibco - General Contractor 25% Progress ",
+      "po": "TBD",
+      "amount": 527500,
+      "date": "Dec 2026",
+      "status": "pending",
+      "confirmed": false
     }
   ]
 }
