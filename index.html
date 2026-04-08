@@ -222,29 +222,23 @@ function render(d){
 // Built from PO tracker + milestone schedules
 // Dates marked (est.) are estimated from project timelines
 var CASHFLOW = [
-  // ── BRIGHTPICK ──
-  { month:'Mar 2026', project:'Brightpick', item:'Milestone 1 - 30% deposit', amount:659100, status:'paid', confirmed:true },
-  { month:'Jun 2026', project:'Brightpick', item:'Milestone 2 - 30% on delivery', amount:659100, status:'pending', confirmed:false },
-  { month:'Sep 2026', project:'Brightpick', item:'Milestone 3 - 30% system compliance', amount:659100, status:'pending', confirmed:false },
-  { month:'Nov 2026', project:'Brightpick', item:'Milestone 4 - 10% final acceptance', amount:219700, status:'pending', confirmed:false },
-  // ── MEZZANINE ──
-  { month:'Mar 2026', project:'Mezzanine', item:'M1 - 25% deposit with order', amount:71262.50, status:'paid', confirmed:true },
-  { month:'Apr 2026', project:'Mezzanine', item:'M2 - 25% prior to production (est.)', amount:71262.50, status:'pending', confirmed:false },
-  { month:'Jun 2026', project:'Mezzanine', item:'M3 - 40% prior to shipment (est.)', amount:114020, status:'pending', confirmed:false },
-  { month:'Aug 2026', project:'Mezzanine', item:'M4 - 10% net-15 after install (est.)', amount:28505, status:'pending', confirmed:false },
-  // ── VIKING MASEK ──
-  { month:'Mar 2026', project:'Viking Masek', item:'Initial deposit - PO 60025 / Inv 58353', amount:697257, status:'paid', confirmed:true },
-  { month:'Aug 2026', project:'Viking Masek', item:'Balance on delivery (est. ~Aug 20)', amount:232086, status:'pending', confirmed:false },
-  // ── ALL-FILL ──
-  { month:'Mar 2026', project:'All-Fill', item:'PO 60005 - 6 semi-auto fillers', amount:134950, status:'paid', confirmed:true },
-  // ── INFRASTRUCTURE ──
-  { month:'Mar 2026', project:'Infrastructure', item:'PO 60014 - pallet lifts', amount:22813.11, status:'paid', confirmed:true },
-  { month:'Mar 2026', project:'Infrastructure', item:'PO 60008 - platform stairs', amount:9196.40, status:'paid', confirmed:true },
-  // ── REMAINING PKG SCOPE (estimated) ──
-  { month:'Apr 2026', project:'Pkg - Remaining Scope', item:'Vendor POs - declumper, powder filler, printing (est.)', amount:215000, status:'pending', confirmed:false },
-  { month:'Jun 2026', project:'Pkg - Remaining Scope', item:'Electrical, drains, mechanical - deposit (est.)', amount:315150, status:'pending', confirmed:false },
-  { month:'Aug 2026', project:'Pkg - Remaining Scope', item:'Electrical, drains, mechanical - balance (est.)', amount:315150, status:'pending', confirmed:false },
-  { month:'Sep 2026', project:'Pkg - Remaining Scope', item:'Nitrogen generator, final installs (est.)', amount:65000, status:'pending', confirmed:false },
+  { month:"Mar 2026", project:"Brightpick", item:"Milestone 1 - 30% deposit", amount:659100, status:"paid", confirmed:true },
+  { month:"Jun 2026", project:"Brightpick", item:"Milestone 2 - 30% on delivery", amount:659100, status:"pending", confirmed:false },
+  { month:"Sep 2026", project:"Brightpick", item:"Milestone 3 - 30% system compliance", amount:659100, status:"pending", confirmed:false },
+  { month:"Nov 2026", project:"Brightpick", item:"Milestone 4 - 10% final acceptance", amount:219700, status:"pending", confirmed:false },
+  { month:"Mar 2026", project:"Mezzanine", item:"M1 - 25% deposit with order", amount:71262.50, status:"paid", confirmed:true },
+  { month:"Apr 2026", project:"Mezzanine", item:"M2 - 25% prior to production (est.)", amount:71262.50, status:"pending", confirmed:false },
+  { month:"Jun 2026", project:"Mezzanine", item:"M3 - 40% prior to shipment (est.)", amount:114020, status:"pending", confirmed:false },
+  { month:"Aug 2026", project:"Mezzanine", item:"M4 - 10% net-15 after install (est.)", amount:28505, status:"pending", confirmed:false },
+  { month:"Mar 2026", project:"Viking Masek", item:"Initial deposit - PO 60025 / Inv 58353", amount:697257, status:"paid", confirmed:true },
+  { month:"Aug 2026", project:"Viking Masek", item:"Balance on delivery (est. Aug 20)", amount:232086, status:"pending", confirmed:false },
+  { month:"Mar 2026", project:"All-Fill", item:"PO 60005 - 6 semi-auto fillers", amount:134950, status:"paid", confirmed:true },
+  { month:"Mar 2026", project:"Infrastructure", item:"PO 60014 - pallet lifts", amount:22813.11, status:"paid", confirmed:true },
+  { month:"Mar 2026", project:"Infrastructure", item:"PO 60008 - platform stairs", amount:9196.40, status:"paid", confirmed:true },
+  { month:"Apr 2026", project:"Pkg Remaining Scope", item:"Vendor POs - declumper, powder filler, printing (est.)", amount:215000, status:"pending", confirmed:false },
+  { month:"Jun 2026", project:"Pkg Remaining Scope", item:"Electrical, drains, mechanical - deposit (est.)", amount:315150, status:"pending", confirmed:false },
+  { month:"Aug 2026", project:"Pkg Remaining Scope", item:"Electrical, drains, mechanical - balance (est.)", amount:315150, status:"pending", confirmed:false },
+  { month:"Sep 2026", project:"Pkg Remaining Scope", item:"Nitrogen generator, final installs (est.)", amount:65000, status:"pending", confirmed:false }
 ];
 
 var MONTH_ORDER = ['Jan 2026','Feb 2026','Mar 2026','Apr 2026','May 2026','Jun 2026','Jul 2026','Aug 2026','Sep 2026','Oct 2026','Nov 2026','Dec 2026'];
