@@ -571,14 +571,7 @@
           "label": "Pallet Lift & Platform PO",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 0.14,
-              "end": 0.14,
-              "color": "#7F77DD"
-            }
-          ]
+          "risk_level": ""
         },
         {
           "label": "Pallet Lift & Platofrm Delivery",
