@@ -494,13 +494,6 @@
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
-          "bars": [
-            {
-              "start": 5.63,
-              "end": 5.86,
-              "color": "#EF9F27"
-            }
-          ],
           "milestones": [
             {
               "month": 5,
