@@ -12,8 +12,8 @@
   ],
   "projects": [
     {
-      "id": "nj-fulfillment-phase-1-brightpick",
-      "name": "NJ Fulfillment Phase 1 - Brightpick",
+      "id": "brightpick-phase-1-nj",
+      "name": "Brightpick - Phase 1 NJ",
       "status": "active",
       "approved_budget": 2700000,
       "contract_total": 2197000,
@@ -37,7 +37,48 @@
         "project_expense": 189200,
         "total_investment": 2824200
       },
-      "pos": [],
+      "pos": [
+        {
+          "po": 60018,
+          "vendor": "Brightpick",
+          "description": "Contract total (30/30/30/10 terms)",
+          "date": "2026-03-10T04:00:00.000Z",
+          "amount": 2197000,
+          "type": "contract"
+        },
+        {
+          "po": 60018,
+          "vendor": "Brightpick",
+          "description": "Milestone 1 ? 30% deposit paid",
+          "date": "~Mar 17, 2026",
+          "amount": 659100,
+          "type": "paid"
+        },
+        {
+          "po": 60018,
+          "vendor": "Brightpick",
+          "description": "Milestone 2 ? 30% on delivery",
+          "date": "~Jun 2026",
+          "amount": 659100,
+          "type": "pending"
+        },
+        {
+          "po": 60018,
+          "vendor": "Brightpick",
+          "description": "Milestone 3 ? 30% on system compliance",
+          "date": "~Sep 2026",
+          "amount": 659100,
+          "type": "pending"
+        },
+        {
+          "po": 60018,
+          "vendor": "Brightpick",
+          "description": "Milestone 4 ? 10% final acceptance",
+          "date": "~Nov 2026",
+          "amount": 219700,
+          "type": "pending"
+        }
+      ],
       "gantt": [
         {
           "label": "Contract signed + 30% deposit (~$659K paid)",
@@ -161,8 +202,8 @@
       ]
     },
     {
-      "id": "packaging-plant-modernization",
-      "name": "Packaging / Plant Modernization",
+      "id": "packaging-modernization",
+      "name": "Packaging Modernization",
       "status": "active",
       "approved_budget": 3700000,
       "contract_total": 3700000,
