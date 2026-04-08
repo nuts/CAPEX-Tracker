@@ -16,7 +16,7 @@
       "name": "Brightpick - Phase 1 NJ",
       "status": "active",
       "approved_budget": 2700000,
-      "contract_total": 2197000,
+      "contract_total": 2256743.84,
       "paid_to_date": 659100,
       "annualized_savings": 770000,
       "color": "#378ADD",
@@ -38,14 +38,6 @@
         "total_investment": 2824200
       },
       "pos": [
-        {
-          "po": 60018,
-          "vendor": "Brightpick",
-          "description": "Contract total (30/30/30/10 terms)",
-          "date": "2026-03-10T04:00:00.000Z",
-          "amount": 2197000,
-          "type": "contract"
-        },
         {
           "po": 60018,
           "vendor": "Brightpick",
@@ -76,6 +68,14 @@
           "description": "Milestone 4 ? 10% final acceptance",
           "date": "~Nov 2026",
           "amount": 219700,
+          "type": "pending"
+        },
+        {
+          "po": "TBD",
+          "vendor": "Brightpick",
+          "description": "Spare Parts ",
+          "date": "2026-07-01T04:00:00.000Z",
+          "amount": 59743.84,
           "type": "pending"
         }
       ],
@@ -206,7 +206,7 @@
       "name": "Packaging Modernization",
       "status": "active",
       "approved_budget": 3700000,
-      "contract_total": 3700000,
+      "contract_total": 1434316.51,
       "paid_to_date": 935479,
       "annualized_savings": 2200000,
       "color": "#1D9E75",
@@ -233,8 +233,32 @@
           "vendor": "Viking Masek Packaging Technologies LLC",
           "description": "New rotary pouch filler ? initial deposit",
           "date": "2026-03-18T04:00:00.000Z",
-          "amount": 697257,
+          "amount": 348628.5,
           "type": "paid"
+        },
+        {
+          "po": "60025 / Inv 58353",
+          "vendor": "Viking Masek Packaging Technologies LLC",
+          "description": "New rotary pouch filler ? initial deposit",
+          "date": "2026-03-18T04:00:00.000Z",
+          "amount": 209177.1,
+          "type": "pending"
+        },
+        {
+          "po": "60025 / Inv 58353",
+          "vendor": "Viking Masek Packaging Technologies LLC",
+          "description": "New rotary pouch filler ? initial deposit",
+          "date": "2026-03-18T04:00:00.000Z",
+          "amount": 69725.7,
+          "type": "pending"
+        },
+        {
+          "po": "60025 / Inv 58353",
+          "vendor": "Viking Masek Packaging Technologies LLC",
+          "description": "New rotary pouch filler ? initial deposit",
+          "date": "2026-03-18T04:00:00.000Z",
+          "amount": 69725.7,
+          "type": "pending"
         },
         {
           "po": 60005,
