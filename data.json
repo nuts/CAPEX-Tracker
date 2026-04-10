@@ -122,9 +122,16 @@
           "risk_level": "medium",
           "bars": [
             {
-              "start": -0.75,
+              "start": -0.52,
               "end": 5.67,
               "color": "#B5D4F4"
+            }
+          ],
+          "milestones": [
+            {
+              "month": -1,
+              "pct": 48,
+              "done": true
             }
           ]
         },
