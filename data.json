@@ -4,7 +4,7 @@
     "title": "Capital Projects Tracker - Plant of the Future",
     "facility": "NJ facility",
     "fiscal_year": "FY2026",
-    "last_updated": "April 10, 2026",
+    "last_updated": "2026-04-08 16:21:56.160000",
     "last_updated_by": "Mark Toppel"
   },
   "open_items": [
@@ -12,106 +12,74 @@
   ],
   "projects": [
     {
-      "id": "brightpick-phase-1-nj",
+      "id": "brightpick---phase-1-nj",
       "name": "Brightpick - Phase 1 NJ",
       "status": "active",
-      "approved_budget": 2700000,
-      "contract_total": 2856743.84,
-      "paid_to_date": 659100,
-      "annualized_savings": 770000,
+      "approved_budget": 2700000.0,
+      "contract_total": 2256743.84,
+      "paid_to_date": 659100.0,
+      "annualized_savings": 770000.0,
       "color": "#378ADD",
       "color_light": "#B5D4F4",
       "note": "Contract signed Mar 10. Contract value $2,197,000 is $503K under the $2.7M approved budget. 10% contingency ($263,500) included in approval. PO# not yet confirmed.",
-      "project_number": "26-0001",
-      "project_leader": "Mark Toppel",
-      "irr": 0.165,
-      "npv": 1279020,
-      "simple_payback_yrs": 4,
-      "start_date": "2026-01-30T05:00:00.000Z",
-      "completion_date": "2026-11-06T05:00:00.000Z",
-      "budget_detail": {
-        "capital": 2635000,
-        "contingency_pct": 10,
-        "contingency_budget": 263500,
-        "contingency_used": 30000,
-        "project_expense": 189200,
-        "total_investment": 2824200
-      },
       "pos": [
         {
-          "po": 60018,
+          "po": "60018",
           "vendor": "Brightpick",
           "description": "Automated Fulfillment 30% Deposit ",
-          "date": "2026-03-17T04:00:00.000Z",
-          "amount": 659100,
+          "date": "3/17/2026",
+          "amount": 659100.0,
           "type": "paid"
         },
         {
-          "po": 60018,
+          "po": "60018",
           "vendor": "Brightpick",
           "description": "Automated Fulfillment 30% Delivery",
-          "date": "2026-06-01T04:00:00.000Z",
-          "amount": 659100,
+          "date": "6/1/2026",
+          "amount": 659100.0,
           "type": "pending"
         },
         {
-          "po": 60018,
+          "po": "60018",
           "vendor": "Brightpick",
           "description": "Automated Fulfillment 30% SAT",
-          "date": "2026-09-01T04:00:00.000Z",
-          "amount": 659100,
+          "date": "9/1/2026",
+          "amount": 659100.0,
           "type": "pending"
         },
         {
-          "po": 60018,
+          "po": "60018",
           "vendor": "Brightpick",
           "description": "Automated Fulfillment 10% Final Acceptance ",
-          "date": "2026-11-01T04:00:00.000Z",
-          "amount": 219700,
+          "date": "11/1/2026",
+          "amount": 219700.0,
           "type": "pending"
         },
         {
-          "po": 60049,
+          "po": "60049",
           "vendor": "Brightpick",
           "description": "Spare Parts ",
-          "date": "2026-07-01T04:00:00.000Z",
+          "date": "7/1/2026",
           "amount": 59743.84,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Conveynace",
-          "description": "Conveynace",
-          "date": "2026-04-20T04:00:00.000Z",
-          "amount": 300000,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Conveynace",
-          "description": "Conveynace",
-          "date": "2026-08-01T04:00:00.000Z",
-          "amount": 300000,
           "type": "pending"
         }
       ],
       "gantt": [
         {
-          "label": "--- Brightpick Automated Fulfillment ",
+          "label": "--- Brightpick Automated Fulfillment",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
-          "label": "Contract Signed & PO Issued ",
+          "label": "Contract Signed & PO Issued",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 0,
               "pct": 30,
-              "done": true
+              "done": true,
+              "date": "3/10"
             }
           ]
         },
@@ -119,58 +87,54 @@
           "label": "Robot & Racking Manufacturing (28 weeks)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "medium",
           "bars": [
             {
-              "start": -0.75,
-              "end": 5.67,
-              "color": "#B5D4F4"
+              "start": -0.756,
+              "end": 5.683,
+              "color": "#B5D4F4",
+              "start_date": "2/6",
+              "end_date": "8/21"
             }
           ]
         },
         {
-          "label": "Equipment Shipment ",
+          "label": "Equipment Shipment",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 5.67,
-              "end": 6.58,
-              "color": "#378ADD"
+              "start": 5.683,
+              "end": 6.603,
+              "color": "#378ADD",
+              "start_date": "8/21",
+              "end_date": "9/18"
             }
           ]
         },
         {
-          "label": "Equipment Delivery  ",
+          "label": "Equipment Delivery",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 6.58,
-              "end": 6.58,
-              "color": "#378ADD"
-            }
-          ],
           "milestones": [
             {
               "month": 6,
-              "pct": 58,
-              "done": false
+              "pct": 60,
+              "done": false,
+              "date": "9/18"
             }
           ]
         },
         {
-          "label": "Site Preparation (Floors & Mezzanine) ",
+          "label": "Site Preparation (Floors & Mezzanine)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "high",
           "bars": [
             {
-              "start": 4.16,
-              "end": 5.54,
-              "color": "#85B7EB"
+              "start": 4.172,
+              "end": 5.552,
+              "color": "#85B7EB",
+              "start_date": "7/6",
+              "end_date": "8/17"
             }
           ]
         },
@@ -178,25 +142,26 @@
           "label": "Conveyance PO Issued",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 1,
               "pct": 64,
-              "done": false
+              "done": false,
+              "date": "4/20"
             }
           ]
         },
         {
-          "label": "Conveyance Manufacturing ",
+          "label": "Conveyance Manufacturing",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 1.64,
-              "end": 3.7,
-              "color": "#378ADD"
+              "start": 1.643,
+              "end": 3.712,
+              "color": "#cccccc",
+              "start_date": "4/20",
+              "end_date": "6/22"
             }
           ]
         },
@@ -204,45 +169,49 @@
           "label": "Conveyance Installation",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 3.7,
-              "end": 4.85,
-              "color": "#378ADD"
+              "start": 3.712,
+              "end": 4.862,
+              "color": "#378ADD",
+              "start_date": "6/22",
+              "end_date": "7/27"
             }
           ]
         },
         {
-          "label": "Conveyance Commissioning ",
+          "label": "Conveyance Commissioning",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 4.85,
-              "end": 5.31,
-              "color": "#85B7EB"
+              "start": 4.862,
+              "end": 5.322,
+              "color": "#85B7EB",
+              "start_date": "7/27",
+              "end_date": "8/10"
             }
           ]
         },
         {
-          "label": "Robot & Racking Assembly ",
+          "label": "Robot & Racking Assembly",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "",
           "bars": [
             {
-              "start": 6.58,
-              "end": 7.27,
-              "color": "#378ADD"
+              "start": 6.603,
+              "end": 7.293,
+              "color": "#cccccc",
+              "start_date": "9/18",
+              "end_date": "10/9"
             }
           ],
           "milestones": [
             {
               "month": 7,
-              "pct": 27,
-              "done": false
+              "pct": 29,
+              "done": false,
+              "date": "10/9"
             }
           ]
         },
@@ -250,68 +219,47 @@
           "label": "Full System Testing & SAT",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "medium",
           "bars": [
             {
-              "start": 7.27,
-              "end": 7.96,
-              "color": "#85B7EB"
+              "start": 7.293,
+              "end": 7.983,
+              "color": "#85B7EB",
+              "start_date": "10/9",
+              "end_date": "10/30"
             }
           ],
           "milestones": [
             {
               "month": 7,
-              "pct": 96,
-              "done": false
+              "pct": 98,
+              "done": false,
+              "date": "10/30"
             }
           ]
         },
         {
           "label": "Brightpick GO-LIVE",
           "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "Brightpick On-Site Support Period",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 7.96,
-              "end": 9.56,
-              "color": "#B5D4F4"
+              "start": 7.983,
+              "end": 9.593,
+              "color": "#cccccc",
+              "start_date": "10/30",
+              "end_date": "12/18"
             }
           ]
         },
         {
           "label": "Brightpick Contract Completion",
           "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        }
-      ],
-      "capital_items": [
-        {
-          "item": "Brightpick (Full System)",
-          "amount": 2200000,
-          "category": "Capital"
-        },
-        {
-          "item": "Conveyance (Induction & Return)",
-          "amount": 405000,
-          "category": "Capital"
-        },
-        {
-          "item": "Brightpick Contingency",
-          "amount": 30000,
-          "category": "Contingency"
-        },
-        {
-          "item": "Project Expenses (Demo, Freight, Tariff) ",
-          "amount": 189200,
-          "category": "Expense"
+          "is_critical_path": false
         }
       ]
     },
@@ -319,207 +267,119 @@
       "id": "packaging-modernization",
       "name": "Packaging Modernization",
       "status": "active",
-      "approved_budget": 3700000,
-      "contract_total": 3489415.09,
-      "paid_to_date": 935479,
-      "annualized_savings": 2200000,
+      "approved_budget": 3700000.0,
+      "contract_total": 1149266.51,
+      "paid_to_date": 935479.0,
+      "annualized_savings": 2200000.0,
       "color": "#1D9E75",
       "color_light": "#9FE1CB",
       "note": "20% contingency base / 25% conservative / 10% upside. Viking 8S-285 is full preformed bagging line at $465K. Mezzanine contact: Andrew Altman, The Mezzanine Company.",
-      "project_number": "26-0002",
-      "project_leader": "Mark Toppel",
-      "irr": 0.416,
-      "npv": 7264837,
-      "simple_payback_yrs": 1.8,
-      "start_date": "2026-03-01T05:00:00.000Z",
-      "completion_date": "2026-10-25T04:00:00.000Z",
-      "budget_detail": {
-        "capital": 3643560,
-        "contingency_pct": 20,
-        "contingency_budget": 728712,
-        "contingency_used": 0,
-        "project_expense": 27500,
-        "total_investment": 3671060
-      },
       "pos": [
         {
-          "po": 60025,
+          "po": "60025",
           "vendor": "Viking Masek Packaging Technologies LLC",
           "description": "Pre-Formed Bagger Deposit ",
-          "date": "2026-03-18T04:00:00.000Z",
+          "date": "3/18/2026",
           "amount": 348628.5,
           "type": "paid"
         },
         {
-          "po": 60025,
+          "po": "60025",
           "vendor": "Viking Masek Packaging Technologies LLC",
           "description": "Pre-Formed Bagger FAT",
-          "date": "2026-07-18T04:00:00.000Z",
+          "date": "7/18/2026",
           "amount": 209177.1,
           "type": "pending"
         },
         {
-          "po": 60025,
+          "po": "60025",
           "vendor": "Viking Masek Packaging Technologies LLC",
           "description": "Pre-Formed Bagger Delivery",
-          "date": "2026-08-18T04:00:00.000Z",
+          "date": "8/18/2026",
           "amount": 69725.7,
           "type": "pending"
         },
         {
-          "po": 60025,
+          "po": "60025",
           "vendor": "Viking Masek Packaging Technologies LLC",
           "description": "Pre-Formed Bagger SAT",
-          "date": "2026-09-18T04:00:00.000Z",
+          "date": "9/18/2026",
           "amount": 69725.7,
           "type": "pending"
         },
         {
-          "po": 60005,
+          "po": "60005",
           "vendor": "All-Fill Inc",
           "description": "Semi-Automated Fillers (100% Payment)",
-          "date": "2026-03-13T04:00:00.000Z",
-          "amount": 134950,
+          "date": "3/13/2026",
+          "amount": 134950.0,
           "type": "paid"
         },
         {
-          "po": 60021,
+          "po": "60021",
           "vendor": "The Mezzanine Company",
           "description": "Mezzanine 25% Deposit",
-          "date": "2026-03-13T04:00:00.000Z",
+          "date": "3/13/2026",
           "amount": 71262.5,
           "type": "paid"
         },
         {
-          "po": 60021,
+          "po": "60021",
           "vendor": "The Mezzanine Company",
           "description": "Mezzanine 25% Production",
-          "date": "2026-05-01T04:00:00.000Z",
+          "date": "5/1/2026",
           "amount": 71262.5,
           "type": "pending"
         },
         {
-          "po": 60021,
+          "po": "60021",
           "vendor": "The Mezzanine Company",
           "description": "Mezzanine 40% at Shipment ",
-          "date": "2026-06-01T04:00:00.000Z",
-          "amount": 114020,
+          "date": "6/1/2026",
+          "amount": 114020.0,
           "type": "pending"
         },
         {
-          "po": 60021,
+          "po": "60021",
           "vendor": "The Mezzanine Company",
           "description": "Mezzanine 10% Net-15 After Installation",
-          "date": "2026-09-01T04:00:00.000Z",
-          "amount": 28505,
+          "date": "9/1/2026",
+          "amount": 28505.0,
           "type": "pending"
         },
         {
-          "po": 60014,
+          "po": "60014",
           "vendor": "Global Industrial",
           "description": "Pallet Lifts for Fillers (Qty x3)",
-          "date": "2026-03-10T04:00:00.000Z",
+          "date": "3/10/2026",
           "amount": 22813.11,
           "type": "paid"
         },
         {
-          "po": 60008,
+          "po": "60008",
           "vendor": "Ajay Metal",
           "description": "Platform Stairs for Fillers (Qty x3)",
-          "date": "2026-03-05T05:00:00.000Z",
+          "date": "3/5/2026",
           "amount": 9196.4,
           "type": "paid"
-        },
-        {
-          "po": 60050,
-          "vendor": "Pouchmark",
-          "description": "Direct to Pouch Printer",
-          "date": "2026-04-10T04:00:00.000Z",
-          "amount": 22574.29,
-          "type": "pending"
-        },
-        {
-          "po": 60050,
-          "vendor": "Pouchmark",
-          "description": "Direct to Pouch Printer",
-          "date": "2026-04-10T04:00:00.000Z",
-          "amount": 22574.29,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "All-Fill",
-          "description": "Powder Filler",
-          "date": "2026-05-01T04:00:00.000Z",
-          "amount": 65000,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Whirlwind Engineering",
-          "description": "Dried Fruit Declumper",
-          "date": "2026-05-01T04:00:00.000Z",
-          "amount": 70000,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "N2GEN",
-          "description": "Nitrogen Generator for Backflush",
-          "date": "2026-05-01T04:00:00.000Z",
-          "amount": 50000,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Cibco",
-          "description": "General Contractor 25% Down",
-          "date": "2026-05-01T04:00:00.000Z",
-          "amount": 527500,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Cibco",
-          "description": "General Contractor 25% Progress ",
-          "date": "2026-07-01T04:00:00.000Z",
-          "amount": 527500,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Cibco",
-          "description": "General Contractor 25% Progress ",
-          "date": "2026-09-01T04:00:00.000Z",
-          "amount": 527500,
-          "type": "pending"
-        },
-        {
-          "po": "TBD",
-          "vendor": "Cibco",
-          "description": "General Contractor 25% Progress ",
-          "date": "2026-12-01T05:00:00.000Z",
-          "amount": 527500,
-          "type": "pending"
         }
       ],
       "gantt": [
         {
           "label": "--- Expand the Fulfillment Mezzanine (4,500 sqft)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
-          "label": "PO Issued (March 13th) ",
+          "label": "PO Issued (March 13th)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 0,
-              "pct": 40,
-              "done": true
+              "pct": 39,
+              "done": true,
+              "date": "3/13"
             }
           ]
         },
@@ -527,12 +387,13 @@
           "label": "Design & Fire Protection",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "high",
           "bars": [
             {
-              "start": 0.4,
-              "end": 1.77,
-              "color": "#1D9E75"
+              "start": 0.394,
+              "end": 1.774,
+              "color": "#5DCAA5",
+              "start_date": "3/13",
+              "end_date": "4/24"
             }
           ]
         },
@@ -540,12 +401,13 @@
           "label": "PE Drawings",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "high",
           "bars": [
             {
-              "start": 1.77,
-              "end": 2.23,
-              "color": "#5DCAA5"
+              "start": 1.774,
+              "end": 2.234,
+              "color": "#5DCAA5",
+              "start_date": "4/24",
+              "end_date": "5/8"
             }
           ]
         },
@@ -553,19 +415,21 @@
           "label": "Permit Submittal & Approval",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "high",
           "bars": [
             {
-              "start": 2.23,
-              "end": 3.15,
-              "color": "#5DCAA5"
+              "start": 2.234,
+              "end": 3.154,
+              "color": "#5DCAA5",
+              "start_date": "5/8",
+              "end_date": "6/5"
             }
           ],
           "milestones": [
             {
               "month": 3,
               "pct": 15,
-              "done": false
+              "done": false,
+              "date": "6/5"
             }
           ]
         },
@@ -573,25 +437,27 @@
           "label": "Steel Fabrication",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 3.15,
-              "end": 5.44,
-              "color": "#5DCAA5"
+              "start": 3.154,
+              "end": 5.453,
+              "color": "#5DCAA5",
+              "start_date": "6/5",
+              "end_date": "8/14"
             }
           ]
         },
         {
-          "label": "Delivery ",
+          "label": "Delivery",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "",
           "bars": [
             {
-              "start": 5.44,
-              "end": 5.67,
-              "color": "#1D9E75"
+              "start": 5.453,
+              "end": 5.683,
+              "color": "#5DCAA5",
+              "start_date": "8/14",
+              "end_date": "8/21"
             }
           ]
         },
@@ -599,12 +465,13 @@
           "label": "Installation On-Site",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 5.67,
-              "end": 6.13,
-              "color": "#5DCAA5"
+              "start": 5.683,
+              "end": 6.143,
+              "color": "#5DCAA5",
+              "start_date": "8/21",
+              "end_date": "9/4"
             }
           ]
         },
@@ -612,38 +479,30 @@
           "label": "Complete (Brightpick Requested Date)",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "high",
-          "bars": [
-            {
-              "start": 7.27,
-              "end": 7.27,
-              "color": "#378ADD"
-            }
-          ],
           "milestones": [
             {
               "month": 4,
-              "pct": 78,
-              "done": false
+              "pct": 80,
+              "done": false,
+              "date": "7/25"
             }
           ]
         },
         {
           "label": "---VikingMasek Preformed Bagger (Model 8S-285)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "PO Issued (March 18th)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 0,
               "pct": 56,
-              "done": true
+              "done": true,
+              "date": "3/18"
             }
           ]
         },
@@ -651,12 +510,13 @@
           "label": "Equipment Manufacturing & FAT (20-week leadtime)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "medium",
           "bars": [
             {
-              "start": 1.05,
-              "end": 5.63,
-              "color": "#FCDFA8"
+              "start": 1.051,
+              "end": 5.65,
+              "color": "#FAC775",
+              "start_date": "4/2",
+              "end_date": "8/20"
             }
           ]
         },
@@ -664,12 +524,12 @@
           "label": "Equipment Delivery (~Aug 20)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 5,
-              "pct": 86,
-              "done": false
+              "pct": 88,
+              "done": false,
+              "date": "8/27"
             }
           ]
         },
@@ -677,12 +537,13 @@
           "label": "Installation & Commissioning",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 5.86,
-              "end": 6.55,
-              "color": "#EF9F27"
+              "start": 5.88,
+              "end": 6.57,
+              "color": "#EF9F27",
+              "start_date": "8/27",
+              "end_date": "9/17"
             }
           ]
         },
@@ -690,38 +551,30 @@
           "label": "Full Production",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 6.55,
-              "end": 6.55,
-              "color": "#EF9F27"
-            }
-          ],
           "milestones": [
             {
               "month": 6,
-              "pct": 55,
-              "done": false
+              "pct": 57,
+              "done": false,
+              "date": "9/17"
             }
           ]
         },
         {
           "label": "--- All-Fill Semi-Automated Fillers (Qty x6)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "PO Issued (March 13th)",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 0,
-              "pct": 40,
-              "done": false
+              "pct": 39,
+              "done": false,
+              "date": "3/13"
             }
           ]
         },
@@ -729,83 +582,87 @@
           "label": "Filler FAT & Delivery",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 0.4,
-              "end": 1.48,
-              "color": "#7F77DD"
+              "start": 0.394,
+              "end": 1.478,
+              "color": "#7F77DD",
+              "start_date": "3/13",
+              "end_date": "4/15"
             }
           ]
         },
         {
           "label": "Pallet Lift & Platform PO",
           "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "Pallet Lift & Platform Delivery",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 0.14,
-              "end": 1.74,
-              "color": "#AFA9EC"
+              "start": 0.131,
+              "end": 1.741,
+              "color": "#7F77DD",
+              "start_date": "3/5",
+              "end_date": "4/23"
             }
           ]
         },
         {
-          "label": "Installation & Commissioning ",
+          "label": "Installation & Commissioning",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 1.74,
-              "end": 3.47,
-              "color": "#7F77DD"
+              "start": 1.741,
+              "end": 3.482,
+              "color": "#7F77DD",
+              "start_date": "4/23",
+              "end_date": "6/15"
             }
           ]
         },
         {
-          "label": "--- Infrastructure & Installation Work (Cibco GC) ",
+          "label": "--- Infrastructure & Installation Work (Cibco GC)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "Permit Submittal & Approval",
           "is_subheader": false,
           "is_critical_path": true,
-          "risk_level": "",
           "bars": [
             {
-              "start": 1.31,
+              "start": 1.314,
               "end": 2.3,
-              "color": "#0097A7"
+              "color": "#cccccc",
+              "start_date": "4/10",
+              "end_date": "5/10"
             }
           ],
           "milestones": [
             {
               "month": 2,
               "pct": 30,
-              "done": false
+              "done": false,
+              "date": "5/10"
             }
           ]
         },
         {
-          "label": "Final Subcontractor Pricing ",
+          "label": "Final Subcontractor Pricing",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
-              "start": 1.31,
-              "end": 1.77,
-              "color": "#0097A7"
+              "start": 1.314,
+              "end": 1.774,
+              "color": "#cccccc",
+              "start_date": "4/10",
+              "end_date": "4/24"
             }
           ]
         },
@@ -813,275 +670,108 @@
           "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "medium",
           "milestones": [
             {
               "month": 1,
               "pct": 77,
-              "done": false
+              "done": false,
+              "date": "4/24"
             }
           ]
         },
         {
-          "label": "Physical Work Starts ",
+          "label": "Physical Work Starts",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "bars": [
             {
               "start": 2.3,
-              "end": 8.19,
-              "color": "#4DD0E1"
+              "end": 8.213,
+              "color": "#7F77DD",
+              "start_date": "5/10",
+              "end_date": "11/6"
             }
           ],
           "milestones": [
             {
               "month": 2,
               "pct": 30,
-              "done": false
+              "done": false,
+              "date": "5/10"
             }
           ]
         },
         {
           "label": "--- Direct to Pouch Printing (TTO Pouchmark Qty x2)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
-          "label": "PO Issued (April 10th) ",
+          "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 1,
-              "pct": 31,
-              "done": true
-            }
-          ]
-        },
-        {
-          "label": "Equipment Manufacturing",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 1.31,
-              "end": 3.38,
-              "color": "#D4956A"
-            }
-          ]
-        },
-        {
-          "label": "Equipment Delivery ",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 3.38,
-              "end": 3.61,
-              "color": "#D4956A"
-            }
-          ]
-        },
-        {
-          "label": "Equipment Setup & Integration ",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 3.61,
-              "end": 4.29,
-              "color": "#D4956A"
-            }
-          ]
-        },
-        {
-          "label": "Testing & GO Live",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": "",
-          "bars": [
-            {
-              "start": 4.29,
-              "end": 4.52,
-              "color": "#D4956A"
+              "pct": 64,
+              "done": false,
+              "date": "4/20"
             }
           ]
         },
         {
           "label": "--- Powder Filler (All Fill)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 1,
               "pct": 64,
-              "done": false
+              "done": false,
+              "date": "4/20"
             }
           ]
         },
         {
           "label": "--- Dried Fruit DeClumper (Valley)",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 1,
               "pct": 64,
-              "done": false
+              "done": false,
+              "date": "4/20"
             }
           ]
         },
         {
-          "label": "--- Nitrogen Generator ",
+          "label": "--- Nitrogen Generator",
           "is_subheader": true,
-          "is_critical_path": false,
-          "risk_level": ""
+          "is_critical_path": false
         },
         {
           "label": "PO Issue",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": "",
           "milestones": [
             {
               "month": 1,
               "pct": 64,
-              "done": false
+              "done": false,
+              "date": "4/20"
             }
           ]
-        },
-        {
-          "label": "",
-          "is_subheader": false,
-          "is_critical_path": false,
-          "risk_level": ""
-        }
-      ],
-      "capital_items": [
-        {
-          "item": "VikingMasek 8S-285 Pre-Formed Bagger Line",
-          "amount": 465000,
-          "category": "Capital"
-        },
-        {
-          "item": "New Mezzanine - Expanded Structure",
-          "amount": 450000,
-          "category": "Capital"
-        },
-        {
-          "item": "Electrical Installation (Baggers, Fillers, etc.)",
-          "amount": 355000,
-          "category": "Capital"
-        },
-        {
-          "item": "Mechanical (Plumbing, HVAC, Rigging)",
-          "amount": 192000,
-          "category": "Capital"
-        },
-        {
-          "item": "New Mezzanine - Fire Protection",
-          "amount": 150000,
-          "category": "Capital"
-        },
-        {
-          "item": "All-Fill VF100e Semi-Automated Fillers (Qty x6)",
-          "amount": 122000,
-          "category": "Capital"
-        },
-        {
-          "item": "Drains for Roasting (80LF + Grease Trap)",
-          "amount": 83300,
-          "category": "Capital"
-        },
-        {
-          "item": "Direct Pouch Printing (PouchMark FLOW XT500 Qty x2)",
-          "amount": 80000,
-          "category": "Capital"
-        },
-        {
-          "item": "Dried Fruit Declumper (Whirlwind Engineering)",
-          "amount": 70000,
-          "category": "Capital"
-        },
-        {
-          "item": "Powder Filler - Brand TBD (Viking or All Fill)",
-          "amount": 65000,
-          "category": "Capital"
-        },
-        {
-          "item": "Nitrogen Generator for Backflush (N2GEN TS)",
-          "amount": 65000,
-          "category": "Capital"
-        },
-        {
-          "item": "New Mezzanine - Lighting",
-          "amount": 45000,
-          "category": "Capital"
-        },
-        {
-          "item": "Additional Stainless Steel Tables & Conveyors For Lanes",
-          "amount": 30000,
-          "category": "Capital"
-        },
-        {
-          "item": "New Custom Tray Line on Mezzanine ",
-          "amount": 30000,
-          "category": "Capital"
-        },
-        {
-          "item": "Pallet Lifts for Fillers (Qty x3)",
-          "amount": 25000,
-          "category": "Capital"
-        },
-        {
-          "item": "Platform Stairs for Fillers (Qty x3)",
-          "amount": 10000,
-          "category": "Capital"
-        },
-        {
-          "item": "20% contingency (base case)",
-          "amount": 607260,
-          "category": "Contingency"
-        },
-        {
-          "item": "Project expenses (engineering, commissioning)",
-          "amount": 27500,
-          "category": "Expense"
-        },
-        {
-          "item": "General Construction (Walls, Floor, Curbs, Bollards, Doors, etc)",
-          "amount": 689000,
-          "category": "Capital"
-        },
-        {
-          "item": "Rigging & Storage Racking",
-          "amount": 50000,
-          "category": "Capital"
-        },
-        {
-          "item": "Fire Protection (Coverage Changes, Ansell Not Included)",
-          "amount": 60000,
-          "category": "Capital"
         }
       ]
     }
@@ -1089,33 +779,33 @@
   "pipeline": [
     {
       "name": "Automated Chocolate Panning (Dumoulin or Similar) ",
-      "investment": 2500000,
-      "savings": 1200000,
+      "investment": 2500000.0,
+      "savings": 1200000.0,
       "estimated_approval_date": "Q3 2026"
     },
     {
       "name": "Raw Material Storage (AS/RS or Similar) ",
-      "investment": 2100000,
-      "savings": 1000000,
+      "investment": 2100000.0,
+      "savings": 1000000.0,
       "estimated_approval_date": "Q3 2026"
     },
     {
       "name": "Brightpick - Phase 2 NJ",
-      "investment": 1100000,
-      "savings": 350000,
+      "investment": 1100000.0,
+      "savings": 350000.0,
       "estimated_approval_date": "Q4 2026"
     },
     {
       "name": "Non-ROI Upgrades (Infrastructure, Cooler, etc) )",
-      "investment": 1000000,
-      "savings": null,
+      "investment": 1000000.0,
+      "savings": 0.0,
       "estimated_approval_date": "Q4 2026"
     }
   ],
   "cashflow": [
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment 30% Deposit ",
+      "item": "Milestone 1 - 30% deposit paid",
       "po": "60018",
       "amount": 659100,
       "date": "Mar 2026",
@@ -1124,7 +814,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment 30% Delivery",
+      "item": "Milestone 2 - 30% on delivery",
       "po": "60018",
       "amount": 659100,
       "date": "Jun 2026",
@@ -1133,7 +823,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment 30% SAT",
+      "item": "Milestone 3 - 30% on system compliance",
       "po": "60018",
       "amount": 659100,
       "date": "Sep 2026",
@@ -1142,7 +832,7 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Automated Fulfillment 10% Final Acceptance ",
+      "item": "Milestone 4 - 10% final acceptance",
       "po": "60018",
       "amount": 219700,
       "date": "Nov 2026",
@@ -1151,35 +841,17 @@
     },
     {
       "project": "Brightpick - Phase 1 NJ",
-      "item": "Brightpick - Spare Parts ",
-      "po": "60049",
+      "item": "Spare Parts",
+      "po": "TBD",
       "amount": 59743.84,
       "date": "Jul 2026",
       "status": "pending",
       "confirmed": false
     },
     {
-      "project": "Brightpick - Phase 1 NJ",
-      "item": "Conveynace - Conveynace",
-      "po": "TBD",
-      "amount": 300000,
-      "date": "Apr 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Brightpick - Phase 1 NJ",
-      "item": "Conveynace - Conveynace",
-      "po": "TBD",
-      "amount": 300000,
-      "date": "Aug 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger Deposit ",
-      "po": "60025",
+      "item": "Viking Masek - New rotary pouch filler - initial deposit",
+      "po": "60025 / Inv 58353",
       "amount": 348628.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -1187,34 +859,34 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger FAT",
-      "po": "60025",
+      "item": "Viking Masek - New rotary pouch filler - 2nd payment",
+      "po": "60025 / Inv 58353",
       "amount": 209177.1,
-      "date": "Jul 2026",
+      "date": "Mar 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger Delivery",
-      "po": "60025",
+      "item": "Viking Masek - New rotary pouch filler - 3rd payment",
+      "po": "60025 / Inv 58353",
       "amount": 69725.7,
-      "date": "Aug 2026",
+      "date": "Mar 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek Packaging Technologies LLC - Pre-Formed Bagger SAT",
-      "po": "60025",
+      "item": "Viking Masek - New rotary pouch filler - final payment",
+      "po": "60025 / Inv 58353",
       "amount": 69725.7,
-      "date": "Sep 2026",
+      "date": "Mar 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "All-Fill Inc - Semi-Automated Fillers (100% Payment)",
+      "item": "All-Fill Inc - 6 new semi-automated fillers",
       "po": "60005",
       "amount": 134950,
       "date": "Mar 2026",
@@ -1223,8 +895,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine 25% Deposit",
-      "po": "60021",
+      "item": "The Mezzanine Company - 25% deposit paid with order",
+      "po": "Q26-0304 M1",
       "amount": 71262.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -1232,8 +904,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine 25% Production",
-      "po": "60021",
+      "item": "The Mezzanine Company - 25% due prior to production",
+      "po": "Q26-0304 M2",
       "amount": 71262.5,
       "date": "May 2026",
       "status": "pending",
@@ -1241,8 +913,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine 40% at Shipment ",
-      "po": "60021",
+      "item": "The Mezzanine Company - 40% due prior to shipment",
+      "po": "Q26-0304 M3",
       "amount": 114020,
       "date": "Jun 2026",
       "status": "pending",
@@ -1250,16 +922,16 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - Mezzanine 10% Net-15 After Installation",
-      "po": "60021",
+      "item": "The Mezzanine Company - 10% net-15 after installation",
+      "po": "Q26-0304 M4",
       "amount": 28505,
-      "date": "Sep 2026",
+      "date": "Aug 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Global Industrial - Pallet Lifts for Fillers (Qty x3)",
+      "item": "Global Industrial - 3 pallet lifts for 6 All-Fill machines",
       "po": "60014",
       "amount": 22813.11,
       "date": "Mar 2026",
@@ -1268,93 +940,12 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Ajay Metal - Platform Stairs for Fillers (Qty x3)",
+      "item": "Ajay Metal - 3 platform stairs for 6 All-Fill machines",
       "po": "60008",
       "amount": 9196.4,
       "date": "Mar 2026",
       "status": "paid",
       "confirmed": true
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Pouchmark - Direct to Pouch Printer",
-      "po": "60050",
-      "amount": 22574.29,
-      "date": "Apr 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Pouchmark - Direct to Pouch Printer",
-      "po": "60050",
-      "amount": 22574.29,
-      "date": "Apr 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "All-Fill - Powder Filler",
-      "po": "TBD",
-      "amount": 65000,
-      "date": "May 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Whirlwind Engineering - Dried Fruit Declumper",
-      "po": "TBD",
-      "amount": 70000,
-      "date": "May 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "N2GEN - Nitrogen Generator for Backflush",
-      "po": "TBD",
-      "amount": 50000,
-      "date": "May 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Cibco - General Contractor 25% Down",
-      "po": "TBD",
-      "amount": 527500,
-      "date": "May 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Cibco - General Contractor 25% Progress ",
-      "po": "TBD",
-      "amount": 527500,
-      "date": "Jul 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Cibco - General Contractor 25% Progress ",
-      "po": "TBD",
-      "amount": 527500,
-      "date": "Sep 2026",
-      "status": "pending",
-      "confirmed": false
-    },
-    {
-      "project": "Packaging Modernization",
-      "item": "Cibco - General Contractor 25% Progress ",
-      "po": "TBD",
-      "amount": 527500,
-      "date": "Dec 2026",
-      "status": "pending",
-      "confirmed": false
     }
   ]
 }
