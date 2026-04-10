@@ -76,8 +76,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 0,
-              "pct": 30,
+              "month": 1,
+              "pct": 22,
               "done": true,
               "date": "3/10"
             }
@@ -89,8 +89,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": -0.756,
-              "end": 5.683,
+              "start": 0.164,
+              "end": 6.603,
               "color": "#B5D4F4",
               "start_date": "2/6",
               "end_date": "8/21"
@@ -103,8 +103,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 5.683,
-              "end": 6.603,
+              "start": 6.603,
+              "end": 7.523,
               "color": "#378ADD",
               "start_date": "8/21",
               "end_date": "9/18"
@@ -117,8 +117,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 6,
-              "pct": 60,
+              "month": 7,
+              "pct": 52,
               "done": false,
               "date": "9/18"
             }
@@ -130,8 +130,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 4.172,
-              "end": 5.552,
+              "start": 5.092,
+              "end": 6.472,
               "color": "#85B7EB",
               "start_date": "7/6",
               "end_date": "8/17"
@@ -144,8 +144,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 64,
+              "month": 2,
+              "pct": 56,
               "done": false,
               "date": "4/20"
             }
@@ -157,8 +157,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 1.643,
-              "end": 3.712,
+              "start": 2.562,
+              "end": 4.632,
               "color": "#cccccc",
               "start_date": "4/20",
               "end_date": "6/22"
@@ -171,8 +171,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 3.712,
-              "end": 4.862,
+              "start": 4.632,
+              "end": 5.782,
               "color": "#378ADD",
               "start_date": "6/22",
               "end_date": "7/27"
@@ -185,8 +185,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 4.862,
-              "end": 5.322,
+              "start": 5.782,
+              "end": 6.242,
               "color": "#85B7EB",
               "start_date": "7/27",
               "end_date": "8/10"
@@ -199,8 +199,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 6.603,
-              "end": 7.293,
+              "start": 7.523,
+              "end": 8.213,
               "color": "#cccccc",
               "start_date": "9/18",
               "end_date": "10/9"
@@ -208,8 +208,8 @@
           ],
           "milestones": [
             {
-              "month": 7,
-              "pct": 29,
+              "month": 8,
+              "pct": 21,
               "done": false,
               "date": "10/9"
             }
@@ -221,8 +221,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 7.293,
-              "end": 7.983,
+              "start": 8.213,
+              "end": 8.903,
               "color": "#85B7EB",
               "start_date": "10/9",
               "end_date": "10/30"
@@ -230,8 +230,8 @@
           ],
           "milestones": [
             {
-              "month": 7,
-              "pct": 98,
+              "month": 8,
+              "pct": 90,
               "done": false,
               "date": "10/30"
             }
@@ -248,8 +248,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 7.983,
-              "end": 9.593,
+              "start": 8.903,
+              "end": 10.512,
               "color": "#cccccc",
               "start_date": "10/30",
               "end_date": "12/18"
@@ -376,8 +376,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 0,
-              "pct": 39,
+              "month": 1,
+              "pct": 31,
               "done": true,
               "date": "3/13"
             }
@@ -389,8 +389,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 0.394,
-              "end": 1.774,
+              "start": 1.314,
+              "end": 2.694,
               "color": "#5DCAA5",
               "start_date": "3/13",
               "end_date": "4/24"
@@ -403,8 +403,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 1.774,
-              "end": 2.234,
+              "start": 2.694,
+              "end": 3.154,
               "color": "#5DCAA5",
               "start_date": "4/24",
               "end_date": "5/8"
@@ -417,8 +417,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 2.234,
-              "end": 3.154,
+              "start": 3.154,
+              "end": 4.074,
               "color": "#5DCAA5",
               "start_date": "5/8",
               "end_date": "6/5"
@@ -426,8 +426,8 @@
           ],
           "milestones": [
             {
-              "month": 3,
-              "pct": 15,
+              "month": 4,
+              "pct": 7,
               "done": false,
               "date": "6/5"
             }
@@ -439,8 +439,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 3.154,
-              "end": 5.453,
+              "start": 4.074,
+              "end": 6.373,
               "color": "#5DCAA5",
               "start_date": "6/5",
               "end_date": "8/14"
@@ -453,8 +453,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 5.453,
-              "end": 5.683,
+              "start": 6.373,
+              "end": 6.603,
               "color": "#5DCAA5",
               "start_date": "8/14",
               "end_date": "8/21"
@@ -467,8 +467,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 5.683,
-              "end": 6.143,
+              "start": 6.603,
+              "end": 7.063,
               "color": "#5DCAA5",
               "start_date": "8/21",
               "end_date": "9/4"
@@ -481,8 +481,8 @@
           "is_critical_path": true,
           "milestones": [
             {
-              "month": 4,
-              "pct": 80,
+              "month": 5,
+              "pct": 72,
               "done": false,
               "date": "7/25"
             }
@@ -499,8 +499,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 0,
-              "pct": 56,
+              "month": 1,
+              "pct": 48,
               "done": true,
               "date": "3/18"
             }
@@ -512,8 +512,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 1.051,
-              "end": 5.65,
+              "start": 1.971,
+              "end": 6.57,
               "color": "#FAC775",
               "start_date": "4/2",
               "end_date": "8/20"
@@ -526,8 +526,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 5,
-              "pct": 88,
+              "month": 6,
+              "pct": 80,
               "done": false,
               "date": "8/27"
             }
@@ -539,8 +539,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 5.88,
-              "end": 6.57,
+              "start": 6.8,
+              "end": 7.49,
               "color": "#EF9F27",
               "start_date": "8/27",
               "end_date": "9/17"
@@ -553,8 +553,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 6,
-              "pct": 57,
+              "month": 7,
+              "pct": 49,
               "done": false,
               "date": "9/17"
             }
@@ -571,8 +571,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 0,
-              "pct": 39,
+              "month": 1,
+              "pct": 31,
               "done": false,
               "date": "3/13"
             }
@@ -584,8 +584,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 0.394,
-              "end": 1.478,
+              "start": 1.314,
+              "end": 2.398,
               "color": "#7F77DD",
               "start_date": "3/13",
               "end_date": "4/15"
@@ -603,8 +603,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 0.131,
-              "end": 1.741,
+              "start": 1.051,
+              "end": 2.661,
               "color": "#7F77DD",
               "start_date": "3/5",
               "end_date": "4/23"
@@ -617,8 +617,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 1.741,
-              "end": 3.482,
+              "start": 2.661,
+              "end": 4.402,
               "color": "#7F77DD",
               "start_date": "4/23",
               "end_date": "6/15"
@@ -636,8 +636,8 @@
           "is_critical_path": true,
           "bars": [
             {
-              "start": 1.314,
-              "end": 2.3,
+              "start": 2.234,
+              "end": 3.219,
               "color": "#cccccc",
               "start_date": "4/10",
               "end_date": "5/10"
@@ -645,8 +645,8 @@
           ],
           "milestones": [
             {
-              "month": 2,
-              "pct": 30,
+              "month": 3,
+              "pct": 22,
               "done": false,
               "date": "5/10"
             }
@@ -658,8 +658,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 1.314,
-              "end": 1.774,
+              "start": 2.234,
+              "end": 2.694,
               "color": "#cccccc",
               "start_date": "4/10",
               "end_date": "4/24"
@@ -672,8 +672,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 77,
+              "month": 2,
+              "pct": 69,
               "done": false,
               "date": "4/24"
             }
@@ -685,8 +685,8 @@
           "is_critical_path": false,
           "bars": [
             {
-              "start": 2.3,
-              "end": 8.213,
+              "start": 3.219,
+              "end": 9.133,
               "color": "#7F77DD",
               "start_date": "5/10",
               "end_date": "11/6"
@@ -694,8 +694,8 @@
           ],
           "milestones": [
             {
-              "month": 2,
-              "pct": 30,
+              "month": 3,
+              "pct": 22,
               "done": false,
               "date": "5/10"
             }
@@ -712,8 +712,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 64,
+              "month": 2,
+              "pct": 56,
               "done": false,
               "date": "4/20"
             }
@@ -730,8 +730,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 64,
+              "month": 2,
+              "pct": 56,
               "done": false,
               "date": "4/20"
             }
@@ -748,8 +748,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 64,
+              "month": 2,
+              "pct": 56,
               "done": false,
               "date": "4/20"
             }
@@ -766,8 +766,8 @@
           "is_critical_path": false,
           "milestones": [
             {
-              "month": 1,
-              "pct": 64,
+              "month": 2,
+              "pct": 56,
               "done": false,
               "date": "4/20"
             }
@@ -850,8 +850,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek - New rotary pouch filler - initial deposit",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek - initial deposit",
+      "po": "60025",
       "amount": 348628.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -859,34 +859,34 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek - New rotary pouch filler - 2nd payment",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek - 2nd payment",
+      "po": "60025",
       "amount": 209177.1,
-      "date": "Mar 2026",
+      "date": "Jul 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek - New rotary pouch filler - 3rd payment",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek - 3rd payment",
+      "po": "60025",
       "amount": 69725.7,
-      "date": "Mar 2026",
+      "date": "Aug 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Viking Masek - New rotary pouch filler - final payment",
-      "po": "60025 / Inv 58353",
+      "item": "Viking Masek - final payment",
+      "po": "60025",
       "amount": 69725.7,
-      "date": "Mar 2026",
+      "date": "Sep 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "All-Fill Inc - 6 new semi-automated fillers",
+      "item": "All-Fill Inc - 6 semi-automated fillers",
       "po": "60005",
       "amount": 134950,
       "date": "Mar 2026",
@@ -895,8 +895,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - 25% deposit paid with order",
-      "po": "Q26-0304 M1",
+      "item": "The Mezzanine Company - 25% deposit",
+      "po": "60021",
       "amount": 71262.5,
       "date": "Mar 2026",
       "status": "paid",
@@ -904,8 +904,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - 25% due prior to production",
-      "po": "Q26-0304 M2",
+      "item": "The Mezzanine Company - 25% production",
+      "po": "60021",
       "amount": 71262.5,
       "date": "May 2026",
       "status": "pending",
@@ -913,8 +913,8 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - 40% due prior to shipment",
-      "po": "Q26-0304 M3",
+      "item": "The Mezzanine Company - 40% shipment",
+      "po": "60021",
       "amount": 114020,
       "date": "Jun 2026",
       "status": "pending",
@@ -922,16 +922,16 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "The Mezzanine Company - 10% net-15 after installation",
-      "po": "Q26-0304 M4",
+      "item": "The Mezzanine Company - 10% installation",
+      "po": "60021",
       "amount": 28505,
-      "date": "Aug 2026",
+      "date": "Sep 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
-      "item": "Global Industrial - 3 pallet lifts for 6 All-Fill machines",
+      "item": "Global Industrial - pallet lifts",
       "po": "60014",
       "amount": 22813.11,
       "date": "Mar 2026",
@@ -940,7 +940,7 @@
     },
     {
       "project": "Packaging Modernization",
-      "item": "Ajay Metal - 3 platform stairs for 6 All-Fill machines",
+      "item": "Ajay Metal - platform stairs",
       "po": "60008",
       "amount": 9196.4,
       "date": "Mar 2026",
