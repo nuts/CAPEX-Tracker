@@ -16,7 +16,7 @@
       "name": "Brightpick - Phase 1 NJ",
       "status": "active",
       "approved_budget": 2700000,
-      "contract_total": 2856743.84,
+      "contract_total": 2656743.84,
       "paid_to_date": 659100,
       "annualized_savings": 770000,
       "color": "#378ADD",
@@ -83,7 +83,7 @@
           "vendor": "Conveynace",
           "description": "Conveynace",
           "date": "2026-04-20T04:00:00.000Z",
-          "amount": 300000,
+          "amount": 200000,
           "type": "pending"
         },
         {
@@ -91,7 +91,7 @@
           "vendor": "Conveynace",
           "description": "Conveynace",
           "date": "2026-08-01T04:00:00.000Z",
-          "amount": 300000,
+          "amount": 200000,
           "type": "pending"
         }
       ],
@@ -1184,7 +1184,7 @@
       "project": "Brightpick - Phase 1 NJ",
       "item": "Conveynace - Conveynace",
       "po": "TBD",
-      "amount": 300000,
+      "amount": 200000,
       "date": "Apr 2026",
       "status": "pending",
       "confirmed": false
@@ -1193,7 +1193,7 @@
       "project": "Brightpick - Phase 1 NJ",
       "item": "Conveynace - Conveynace",
       "po": "TBD",
-      "amount": 300000,
+      "amount": 200000,
       "date": "Aug 2026",
       "status": "pending",
       "confirmed": false
