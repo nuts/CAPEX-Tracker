@@ -57,15 +57,16 @@ tr.tot td{font-weight:700;color:#111;border-top:1px solid #ddd;border-bottom:non
 .ps{font-size:11px;color:#888}
 .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:#666;margin-bottom:10px;align-items:center}
 .sw{width:11px;height:11px;border-radius:2px;display:inline-block;flex-shrink:0}
-.gwrap{overflow-x:auto}
-table.g{min-width:640px}
-table.g th{background:#fff;text-align:center;font-size:11px}
-table.g th.lc{text-align:left;min-width:190px;padding-left:8px}
+.gwrap{width:100%}
+table.g{width:100%;table-layout:fixed;border-collapse:collapse}
+table.g th{background:#fff;text-align:center;font-size:11px;padding:4px 2px}
+table.g th.lc{text-align:left;width:200px;padding-left:8px}
 table.g td{padding:1px 2px;border-bottom:0.5px solid #f0f0f0}
-table.g td.lbl{padding-left:20px;font-size:11px;color:#666;white-space:nowrap}
+table.g td.lbl{padding-left:20px;font-size:11px;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:200px}
 table.g td.lbl.sh{padding-left:8px;font-size:11.5px;font-weight:600;color:#111;background:#f5f5f3}
 table.g td.lbl.cp{border-left:3px solid #C0392B;padding-left:5px;color:#111;font-weight:500}
-table.g tr.ph td{background:#2c2c2a;color:#fff;font-size:12px;font-weight:600;padding:8px 8px 5px}
+table.g tr.ph td{background:#2c2c2a;color:#fff;font-size:12px;font-weight:600;padding:8px 8px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+table.g td.barcell{padding:0}
 </style>
 </head>
 <body>
@@ -155,15 +156,20 @@ function render(d){
   ].map(function(m){return '<div class="metric"><div class="ml">'+m.l+'</div><div class="mv">'+m.v+'</div><div class="ms">'+m.s+'</div></div>';}).join('')+'</div>';
   var gRows="";
   d.projects.forEach(function(proj){
-    gRows+='<tr class="ph"><td colspan="'+(N+1)+'">'+proj.name+'&nbsp;'+bdg(proj.status)+'&nbsp;<span style="font-size:11px;font-weight:400;opacity:.7">Approved '+fmt(proj.approved_budget)+' - Contract '+fmt(proj.contract_total)+' - Savings '+fmt(proj.annualized_savings)+'/yr</span></td></tr>';
+    gRows+='<tr class="ph"><td colspan="2">'+proj.name+'&nbsp;'+bdg(proj.status)+'&nbsp;<span style="font-size:11px;font-weight:400;opacity:.7">Approved '+fmt(proj.approved_budget)+' - Contract '+fmt(proj.contract_total)+' - Savings '+fmt(proj.annualized_savings)+'/yr</span></td></tr>';
     (proj.gantt||[]).forEach(function(task){
       var isSub=task.is_subheader;
       var isCp=task.is_critical_path;
       var bg=isSub?"background:#f5f5f3;":"";
       var lc="lbl"+(isSub?" sh":isCp?" cp":"");
-      gRows+='<tr><td class="'+lc+'" style="'+bg+'">'+task.label+'</td><td colspan="'+N+'" style="padding:0;'+bg+'"><div style="position:relative;height:32px;width:100%;">';
+      gRows+='<tr><td class="'+lc+'" style="'+bg+'" title="'+task.label+'">'+task.label+'</td><td class="barcell" style="'+bg+'"><div style="position:relative;height:32px;width:100%;">';
+      // Draw month dividers
+      for(var mi=1;mi<N;mi++){
+        var lp=(mi/N)*100;
+        gRows+='<div style="position:absolute;top:0;left:'+lp.toFixed(2)+'%;width:1px;height:100%;background:#f0f0f0;"></div>';
+      }
       (task.bars||[]).forEach(function(b){
-        var l=(b.start/N)*100,w=((b.end-b.start)/N)*100;
+        var l=Math.max(0,(b.start/N)*100),w=((b.end-b.start)/N)*100;
         var bc=isCp?"#C0392B":b.color;
         gRows+='<div style="position:absolute;top:8px;height:14px;border-radius:3px;left:'+l.toFixed(2)+'%;width:'+w.toFixed(2)+'%;background:'+bc+';opacity:0.9;"></div>';
         if(b.end_date){
@@ -181,7 +187,8 @@ function render(d){
       gRows+='</div></td></tr>';
     });
   });
-  var gantt='<div class="legend"><span><span class="sw" style="background:#378ADD"></span>Brightpick</span><span><span class="sw" style="background:#1D9E75"></span>Mezzanine</span><span><span class="sw" style="background:#EF9F27"></span>Viking</span><span><span class="sw" style="background:#7F77DD"></span>All-Fill</span><span><span class="sw" style="background:#C0392B"></span>Critical path</span><span><span style="color:#639922;font-size:15px;">&#9670;</span> Complete</span><span><span style="color:#EF9F27;font-size:15px;">&#9670;</span> Pending</span></div><div class="gwrap"><table class="g"><thead><tr><th class="lc">Task</th>'+MONTHS.map(function(m){return "<th>"+m+"</th>";}).join('')+'</tr></thead><tbody>'+gRows+'</tbody></table></div>';
+  var monthHeaders='<tr><th class="lc">Task</th><th style="padding:4px 8px;"><div style="display:flex;justify-content:space-between;font-size:11px;color:#888;">'+MONTHS.map(function(m){return '<span>'+m+'</span>';}).join('')+'</div></th></tr>';
+  var gantt='<div class="legend"><span><span class="sw" style="background:#378ADD"></span>Brightpick</span><span><span class="sw" style="background:#1D9E75"></span>Mezzanine</span><span><span class="sw" style="background:#EF9F27"></span>Viking</span><span><span class="sw" style="background:#7F77DD"></span>All-Fill</span><span><span class="sw" style="background:#C0392B"></span>Critical path</span><span><span style="color:#639922;font-size:15px;">&#9670;</span> Complete</span><span><span style="color:#EF9F27;font-size:15px;">&#9670;</span> Pending</span></div><div class="gwrap"><table class="g"><thead>'+monthHeaders+'</thead><tbody>'+gRows+'</tbody></table></div>';
   var tc=d.projects.reduce(function(s,p){return s+p.contract_total;},0);
   var budget="";
   if(d.open_items&&d.open_items.length){budget+='<div class="alert"><strong>Open items:</strong><ul>'+d.open_items.map(function(i){return "<li>"+i+"</li>";}).join('')+'</ul></div>';}
