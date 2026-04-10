@@ -4,7 +4,7 @@
     "title": "Capital Projects Tracker - Plant of the Future",
     "facility": "NJ facility",
     "fiscal_year": "FY2026",
-    "last_updated": "April 8, 2026",
+    "last_updated": "April 10, 2026",
     "last_updated_by": "Mark Toppel"
   },
   "open_items": [
@@ -320,7 +320,7 @@
       "name": "Packaging Modernization",
       "status": "active",
       "approved_budget": 3700000,
-      "contract_total": 3524266.51,
+      "contract_total": 3489415.09,
       "paid_to_date": 935479,
       "annualized_savings": 2200000,
       "color": "#1D9E75",
@@ -431,19 +431,19 @@
           "type": "paid"
         },
         {
-          "po": "TBD",
+          "po": 60050,
           "vendor": "Pouchmark",
           "description": "Direct to Pouch Printer",
-          "date": "2026-05-01T04:00:00.000Z",
-          "amount": 40000,
+          "date": "2026-04-10T04:00:00.000Z",
+          "amount": 22574.29,
           "type": "pending"
         },
         {
-          "po": "TBD",
+          "po": 60050,
           "vendor": "Pouchmark",
           "description": "Direct to Pouch Printer",
-          "date": "2026-08-01T04:00:00.000Z",
-          "amount": 40000,
+          "date": "2026-04-10T04:00:00.000Z",
+          "amount": 22574.29,
           "type": "pending"
         },
         {
@@ -849,15 +849,67 @@
           "risk_level": ""
         },
         {
-          "label": "PO Issue",
+          "label": "PO Issued (April 10th) ",
           "is_subheader": false,
           "is_critical_path": false,
           "risk_level": "",
           "milestones": [
             {
               "month": 1,
-              "pct": 64,
-              "done": false
+              "pct": 31,
+              "done": true
+            }
+          ]
+        },
+        {
+          "label": "Equipment Manufacturing",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 1.31,
+              "end": 3.38,
+              "color": "#D4956A"
+            }
+          ]
+        },
+        {
+          "label": "Equipment Delivery ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.38,
+              "end": 3.61,
+              "color": "#D4956A"
+            }
+          ]
+        },
+        {
+          "label": "Equipment Setup & Integration ",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 3.61,
+              "end": 4.29,
+              "color": "#D4956A"
+            }
+          ]
+        },
+        {
+          "label": "Testing & GO Live",
+          "is_subheader": false,
+          "is_critical_path": false,
+          "risk_level": "",
+          "bars": [
+            {
+              "start": 4.29,
+              "end": 4.52,
+              "color": "#D4956A"
             }
           ]
         },
@@ -1226,18 +1278,18 @@
     {
       "project": "Packaging Modernization",
       "item": "Pouchmark - Direct to Pouch Printer",
-      "po": "TBD",
-      "amount": 40000,
-      "date": "May 2026",
+      "po": "60050",
+      "amount": 22574.29,
+      "date": "Apr 2026",
       "status": "pending",
       "confirmed": false
     },
     {
       "project": "Packaging Modernization",
       "item": "Pouchmark - Direct to Pouch Printer",
-      "po": "TBD",
-      "amount": 40000,
-      "date": "Aug 2026",
+      "po": "60050",
+      "amount": 22574.29,
+      "date": "Apr 2026",
       "status": "pending",
       "confirmed": false
     },
