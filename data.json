@@ -4,7 +4,7 @@
     "title": "Capital Projects Tracker - Plant of the Future",
     "facility": "NJ facility",
     "fiscal_year": "FY2026",
-    "last_updated": "April 10, 2026",
+    "last_updated": "April 14, 2026",
     "last_updated_by": "Mark Toppel"
   },
   "open_items": [
@@ -296,7 +296,14 @@
           "label": "Brightpick Contract Completion",
           "is_subheader": false,
           "is_critical_path": false,
-          "risk_level": ""
+          "risk_level": "",
+          "milestones": [
+            {
+              "month": 9,
+              "pct": 56,
+              "done": false
+            }
+          ]
         }
       ],
       "capital_items": [
