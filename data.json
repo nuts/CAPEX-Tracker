@@ -527,7 +527,7 @@
       ],
       "gantt": [
         {
-          "label": "--- Expand the Fulfillment Mezzanine (4,500 sqft)",
+          "label": "--- Expand the Fulfillment Mezzanine",
           "is_subheader": true,
           "is_critical_path": false,
           "risk_level": ""
